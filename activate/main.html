@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRIPTOBYTE</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="icon" href="../media/Logo_Windows.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        section {
+            padding: 15px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+            border-left: 6px solid transparent;
+            max-width: 700px;
+        }
+        section[data-module="1"] { border-left-color: #2ECC71; }
+        section[data-module="2"] { border-left-color: #F1C40F; }
+        section[data-module="3"] { border-left-color: #E67E22; }
+        section[data-module="4"] { border-left-color: red; }
+        section[data-module="5"] { border-left-color: #000000; }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="brand">
+            <a href="../index.html" style="font-size: 25px; text-decoration: none; color: white; display: flex;align-items: center;">
+                <img class="logo" src="../media/Logo_Windows.png">Activate
+            </a>
+        </div>
+        <ul class="menu">
+            <li><a href="pages/fundamentos_mod1.html">Fundamentos</a></li>
+            
+            <li><a href="pages/credito_mod1.html">Uso de credito</a></li>
+
+            <li><a href="pages/protegete_mod1.html">Protege en linea</a></li>
+
+            <li><a href="pages/inversiones_mod1.html">Inversiones</a></li>
+
+            <li><a href="pages/criptomonedas.html">Criptomonedas</a></li>
+
+        </ul>
+
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </nav>
+
+
+<main>
+
+    <h1 style="text-align: center;">Bienvenido a <a style="color: blue">Activate</a> de <a style="color: blue">Kryptobyte</a></h1>
+
+    <a style="text-align: center; font-size: 18px; font-weight: 500;">Hasta ahora hay 4 modulos y uno proximamente. <br>
+        Aqui te dejo la descripcion de cada uno para que veas por donde va:</a>
+
+    <section id="module1" data-module="1" tabindex="-1">
+      <h2>Modulo 1: Fundamentos</h2>
+      <p>Vamos a comenzar suave. Aprenderás qué es la inflación, cómo armar un presupuesto real y mucho mas. Ademas, nos vamos a familiarizar con las apps bancarias <p>
+    </section>
+    <section data-module="2" tabindex="-1">
+      <h2>Modulo 2: Uso de credito</h2>
+      <p>El crédito no es dinero gratis, es solo un metodo de pago con beneficios. Veremos cómo construir tu historial crediticio desde cero y evitar las trampas de los bancos.</p>
+    </section>
+    <section data-module="3" tabindex="-1">
+      <h2>Modulo 3: Protegete en linea</h2>
+      <p>Si en la vida real proteges tu casa o auto, en el mundo digital debes proteger tu identidad, tus cuentas y saber unos cuantos conceptos mas. 
+        No necesitas ser un experto, solo debes saber lo necesario.</p>
+    </section>
+    <section data-module="4" tabindex="-1">
+      <h2>Modulo 4: Inversiones</h2>
+      <p>Para poner tu dinero a trabajar. Una guía práctica sobre cómo empezar a invertir, que rayos es fondos mutuos y como comprar tu primera accion.</p>
+    </section>
+    <section data-module="5" tabindex="-1">
+      <h2>Modulo 5: Criptomonedas (proximamente)</h2>
+      <p>Nodo en sincronización xd. Pronto veremos el famoso ecosistema Blockchain y Bitcoin. Parese algo del otro mundo verdad...?</p>
+    </section>
+
+    <a style="text-align: center; font-size: 18px; font-weight: 500;">Si eres principiantes, trata de hacerlo en orden.<br>
+        Si ya conoces algunas cosas, simplemente ve directo a la seccion que no sabes o que tengas curiosidad.</a>
+
+</main>
+
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector('.menu');
+        if (menu.style.display === 'flex') {
+            menu.style.display = 'none';
+        } else {menu.style.display = 'flex';}
+    }
+
+</script>
+    
+</body>
+</html>
+    
