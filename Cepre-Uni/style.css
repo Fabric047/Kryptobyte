@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    min-height: 100vh;
+    background: linear-gradient(to right, #092068, #2F3B7E,#2657D0,#3785E6,#4EA8E4, #3785E6, #2657D0, #2F3B7E, #092068);
+}
+
+.info_send_correct{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    text-align: center;
+    padding: 40px 25px;
+    box-shadow: 0 5px 10px rgba(3, 15, 71, 0.7);
+}
+
+.form_register{
+    width: 48%;
+    display: grid;
+    grid-template-columns: 38% 60%;
+    background: #fff;
+    text-align: center;
+    padding: 20px 25px;
+    box-shadow: 0 5px 10px rgba(3, 15, 71, 0.7);
+}
+
+
+
+.div_login{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    text-align: center;
+    padding: 20px 25px;
+    box-shadow: 0 5px 10px rgba(3, 15, 71, 0.7);
+    height: 500px;
+    max-width: 500px;
+    
+}
+
+.title{
+    color: #252525;
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+form label{
+    margin-bottom: 35px;
+}
+
+.fa-solid{
+    font-size: 20px;
+    color: blue;
+    margin-right: 10px;
+}
+
+form label input{
+    outline: none;
+    border: none;
+    color: #252525;
+    border-bottom: 1px solid blue;
+    padding: 0 5px;
+    font-size: 18px;
+}
+
+
+form button{
+    color: white;
+    background: linear-gradient(to right, darkblue, blue);
+    padding: 10px 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.register{
+    text-decoration: none;
+    margin-top: 10px;
+    color: white; 
+    font-weight: 600; 
+    font-size: 25px;
+    display: inline-block;
+    position: relative;
+}

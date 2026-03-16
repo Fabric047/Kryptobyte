@@ -1,0 +1,190 @@
+:root{
+  --sidebar-width: 260px;
+  --bg-top: #000072;
+  --bg-bottom: #0000FE;
+  --accent: rgba(255,255,255,0.1);
+  --text: #ffffff;
+  --muted: rgba(255,255,255,0.85);
+  --hover: rgba(255,255,255,0.06);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+body{display:flex;background:#f4f7fb;color:#222;}
+
+/* Sidebar */
+.sidebar{
+  width:var(--sidebar-width);
+  min-height:100vh;
+  background: linear-gradient(180deg, var(--bg-top), var(--bg-bottom));
+  color:var(--text);
+  padding:20px 12px;
+  box-shadow:2px 0 8px rgba(0,0,0,0.15);
+}
+
+.brand{
+  padding:10px 12px;
+  margin-bottom:18px;
+  text-align:left;
+}
+.brand-title{
+  font-weight:700;
+  font-size:18px;
+  color:#eaf6ff;
+  padding:8px 10px;
+  border-radius:6px;
+}
+
+/* Menu */
+.menu{list-style:none;padding:0;margin:0;}
+.menu-item{margin:6px 0;}
+.menu-toggle, .single-link{
+  width:100%;
+  display:flex;
+  gap:10px;
+  align-items:center;
+  padding:12px;
+  background:transparent;
+  border:0;
+  color:var(--muted);
+  text-align:left;
+  font-size:15px;
+  cursor:pointer;
+  border-radius:8px;
+}
+.menu-toggle:focus, .single-link:focus{outline:2px solid rgba(255,255,255,0.12); outline-offset:2px;}
+.menu-toggle:hover, .single-link:hover{background:var(--hover); color:var(--text);}
+
+.icon{width:28px; text-align:center; font-size:16px; color:var(--text); opacity:0.9}
+.label{flex:1}
+.caret{font-size:12px; color:var(--text); opacity:0.85; transition:transform .18s ease}
+
+/* Submenu */
+.submenu{
+  margin-top:6px;
+  margin-left:36px;
+  list-style:none;
+  padding:6px 0;
+  transition: max-height 220ms ease, opacity 200ms ease;
+}
+.submenu[hidden]{display:none}
+.submenu li a{
+  display:block;
+  padding:8px 12px;
+  color:var(--muted);
+  text-decoration:none;
+  border-radius:6px;
+  font-size:14px;
+}
+.submenu li a:hover{background:var(--accent); color:var(--text);}
+
+/* caret rotated when expanded - JS will add .expanded class on button */
+.menu-toggle[aria-expanded="true"] .caret{transform:rotate(180deg)}
+
+/* single link style */
+.single-link{display:flex; align-items:center; gap:10px; padding:12px; color:var(--muted); text-decoration:none; border-radius:8px}
+.single-link:hover{background:var(--hover); color:var(--text)}
+
+/* content area */
+.content{flex:1;padding:28px}
+
+
+
+/* BUSCADOR */
+#search-bar{
+    font-size: 16px;
+    font-weight: 600;
+    width: 200px;
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+    transition: width 0.4s ease-in-out;
+    margin-bottom: 50px;
+}
+#search-bar:focus{
+    width: 500px;
+    box-shadow: 0 0 8px rgb(0,123,255,0.3);
+}
+
+/* MAIN: CURSOS */
+.maincontent{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5,250px);
+  justify-content: center;
+}
+
+/* ESTILO DE CONTENEDORES */
+.contenedores{
+  width: 200px;
+  height: auto;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 8px rgba(131, 131, 131, 0.3);
+  margin-bottom: 30px;
+}
+.contenedores a{
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
+}
+.contenedores img{
+  width: 160px;
+}
+.contenedores div{
+  display: flex;
+  gap: 15px;
+}
+.contenedores button{
+  background-color: transparent;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* Modal simple */
+#pdfModal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.6);
+  z-index: 9999;
+}
+#pdfModal.open { display: flex; }
+.modal-content {
+  width: 90%;
+  max-width: 1000px;
+  height: 85%;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.modal-header {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+}
+.modal-body { flex: 1; }
+.modal-body iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.close-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
