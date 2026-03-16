@@ -1,0 +1,100 @@
+body{
+    padding: 10px;
+    margin:10px;
+    background-color: #CEE1F2;
+    height: 100vh;
+}
+
+/* STYLES OF THE NAV */
+nav{
+    display: flex;
+    position: relative;
+    background: blue;
+    padding-top: 0px;
+    margin:0px;
+    flex-wrap: wrap;
+    box-shadow: 0 0 25px rgb(0, 0, 0);
+    justify-content: space-between;
+    align-items: center;
+}
+.brand a img{
+    margin: 10px;
+    width: 55px;
+    height: 55px;
+}
+ul{
+    margin: auto;
+    width: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+}
+ul li a{
+    background-color: blue;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 7px;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+ul li a:hover{
+    border-radius: 7px;
+    background-color: transparent;
+    color: rgb(202, 199, 199);
+    box-shadow: 0 0 10px #00aeff;
+}ul > li{float: left;}
+.menu-icon {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    color: white;
+    font-size: 30px;
+}
+@media (min-width: 1033px) {
+    .menu {
+        display: flex;
+        flex-direction: row;
+    }
+    .menu-icon {display: none}
+}
+/*  */
+
+/* MAIN */
+main{
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 130px;
+}
+
+
+
+/* TEXT OF KRIPTOBYTE */
+.textoAnimado{
+    font-size: 3rem;
+    color: blue;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid transparent;
+    animation: typing 3s steps(14) infinite, blink-caret 1.5s step-end infinite;
+    animation-delay: 1s;
+}
+@keyframes typing{
+    from{width: 0;}
+    to{width: 108%;}
+}
+@keyframes blink-caret{
+    00%{border-color: black;}
+    25%{border-color:  white;}
+    50%{border-color: black;}
+    75%{border-color:  white;}
+    100%{border-color: black;}
+}
