@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Activate: Criptomonedas 7</title>
+  <link rel="stylesheet" href="../../styles/style_pages.css">
+  <link rel="icon" href="../../../media/Logo_Windows.png">
+</head>
+<body>
+
+  <div class="mobile-toggle" aria-hidden="false">
+    <button id="hamburger" aria-controls="primary-sidebar" aria-expanded="false" aria-label="Toggle navigation">
+      ☰
+    </button>
+    <div style="margin-left:.6rem;font-weight:600">Bitcoin</div>
+  </div>
+
+  <!-- Left sidebar -->
+  <aside id="primary-sidebar" class="sidebar" aria-label="Primary navigation">
+    <div class="brand" role="img" aria-hidden="false">
+      <span class="logo" aria-hidden="true"><img src="../../../media/Logo_Windows.png" alt="Logo" style="width: 100%;"></span>
+      <span class="title">Bitcoin</span>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="../criptomonedas.html">Regresar</a></li>
+        <li><a href="criptomonedas5.html">5. Bitcoin y Transacciones</a></li>
+        <li><a href="criptomonedas6.html">6. Criptografía</a></li>
+        <li><a href="criptomonedas7.html" aria-current="page">7. Minería</a></li>
+      </ul>
+    </nav>
+
+    <div style="margin-top:auto;padding:1rem;font-size:.85rem;color:rgba(255, 255, 255, 0.6)">
+      Kryptobyte - Activate
+    </div>
+  </aside>
+
+
+  <main class="main" id="content" tabindex="-1">
+    <h1>Minería en criptomonedas</h1>
+
+    <section id="module1">
+      <h2>Que es la minería?</h2> <br>
+      <p>
+        La minería es uno de los conceptos que más nos confunde por primera vez. <br>
+        Como en Bitcoin (o cualquier otra blockchain) no hay banco que revise que no envíes
+        el mismo dinero 2 veces, necesitamos a alguien que empaquete las transacciones de la
+        Mempool (sala de espera), las ordene en un bloque y las agregue a la blockchain. <br><br>
+        Pero, ¿quién decide qué persona o computadora tiene el derecho de escribir ese nuevo bloque?
+        <br><br>
+        Si cualquier persona pudiera hacerlo gratis, un hacker podría crear millones de cuentas falsas 
+        y alterar los registros. Por eso, Bitcoin exige un requisito: para escribir un bloque, 
+        tienes que demostrar que gastaste trabajo y energía eléctrica. A esto se le llama 
+        Prueba de Trabajo (Proof of Work). <br><br>
+        
+
+        <a style="color: rgb(182, 0, 0); font-weight: 700; font-size: 20px;">¿Cómo funciona el trabajo del minero paso a paso?</a>
+        <br><br>
+        <a style="color: red; font-weight: 700;">=> PASO 1:</a> <br>
+        El minero entra a la Mempool, toma miles de transacciones pendientes (priorizando 
+        las que pagan comisiones más altas ya que, entre más altas sean, él ganará más 
+        obviamente) y las organiza para empaquetarlas en un nuevo bloque.
+        <br><br>
+        <a style="color: red; font-weight: 700;">=> PASO 2:</a> <br><br>
+        <a style="color: red; font-weight: 700;">Lo que Bitcoin le da al minero</a>
+        <br><br>
+        Cuando un minero va a empaquetar un nuevo bloque, Bitcoin le entrega una hoja de 
+        datos fija que incluye: <br>
+        - La lista de transacciones que ocurrieron en ese momento (ej: Pepito le envió 0.1 BTC a 
+        Fernanfloo). <br>
+        - El hash único del bloque anterior (para encadenarlos). <br>
+        - La fecha y hora actual (timestamp). <br><br>
+
+        Luego, el minero junta el Merkle Root + el Hash del bloque anterior + el Timestamp 
+        + la Dificultad actual + la Versión. Si hasheas ese bloque de texto (con 
+        SHA-256), genera un resultado fijo como por ejemplo: "b221d9dbb08...". <br>
+        El problema es que Bitcoin impone una regla estricta: <br>
+        para que el bloque sea válido, su hash final debe empezar con cierta cantidad 
+        de ceros (por ejemplo: 0000000000000000000abcdef...).
+        <br><br>
+        <a style="color: red; font-weight: 700;">Lo que el minero tiene que hacer</a>
+        <br><br>
+        Como los datos del bloque no se pueden cambiar (no puede cambiar la fecha y hora o 
+        cuanto dinero le envió Pepito a Fernanfloo), Bitcoin le permite al minero agregar 
+        un único número variable al final del bloque. A este número aleatorio se le llama 
+        Nonce (Number used ONCE). <br>
+        El trabajo del minero es un proceso de prueba y error. <br>
+        1. Toma los datos del bloque + un número (ej. Nonce=1) <br>
+        2. Lo pasa por SHA-256 y, por ejemplo, sale (a8f9c...) <br>
+        3. Empieza, por ejemplo, por 18 ceros? NO <br>
+        4. Cambia el nonce a 2 (none=2) y repite el proceso millones o incluso billones
+        de veces por segundo. Precisamente aquí radica el problema, la computadora
+        necesita ser potente para calcular el hash (SHA-256) millones de veces.
+        <br><br><br>
+        <br><br>
+        <a style="color: red; font-weight: 700;">=> PASO 3:</a> <br>
+        Una de las millones de computadoras mineras del mundo adivina el número (nonce) 
+        antes que las demás. Anuncia el resultado a toda la red, los nodos revisan en un 
+        milisegundo que la respuesta sea correcta y que las transacciones sean válidas, 
+        y se agrega el bloque a la blockchain.
+        <br><br>
+        <a style="color: red; font-weight: 700;">=> PASO 4:</a> <br>
+        Recompensa: El minero cuya computadora ganó, se queda con todas las comisiones
+        y Bitcoin emite una cantidad fija de bitcoins completamente nuevos como premio
+        para el minero por gastar su electricidad
+        <br><br><br>
+        Gracias a esto, la minería cumple 2 propósitos:
+        <br>
+        1. Seguridad: Al hacer que cueste mucho dinero y electricidad proponer un bloque, 
+        se vuelve económicamente imposible para un hacker engañar al sistema.
+        <br>
+        2. Emision de dinero: Es la única forma en la que nacen nuevos bitcoins al mundo. 
+        No los imprime un gobierno; se "emiten" automáticamente como premio al minero 
+        que valida el bloque.
+        <br><br><br>
+        En resumen: Un minero es una computadora especializada que compite en una carrera 
+        de velocidad para resolver un acertijo aleatorio. La primera que lo resuelve gana 
+        el derecho de procesar las transacciones y recibe una recompensa en bitcoins por su trabajo
+        <br><br><br><br>
+        <a style="color: blue">Dato curioso:</a> El Nonce es un número de 32 bits y solo permite probar unas 4.29 mil 
+        millones de combinaciones. Las máquinas de minería actuales (ASICs) prueban 
+        billones de combinaciones por segundo, así que agotan todos los Nonces posibles 
+        en segundos. Cuando se les acaban, cambian un pequeño dato en la transacción de 
+        recompensa (llamado ExtraNonce) y vuelven a empezar de cero.
+      </p>
+    </section>
+
+    <section id="module2">
+      <h2>PoW: Proof of Work</h2><br>
+      <p>
+        En el mundo digital es muy fácil copiar y pegar archivos. Si tienes un PDF o una 
+        foto, puedes duplicarla mil veces. Si el dinero fuera digital y sencillo de 
+        duplicar, la gente intentaría gastar sus mismos bitcoins dos veces (lo que se 
+        conoce como el problema del doble gasto) <br>
+        Para evitar eso, Satoshi Nakamoto (creador de Bitcoin) pensó:
+        <br>
+        Para que alguien pueda publicar un nuevo bloque de transacciones, debe demostrar 
+        que gastó dinero real en energía y procesamiento computacional. <br>
+        El minero le presenta a toda la red una "prueba" (el hash que empieza por ceros) de 
+        que su computadora hizo un "trabajo" pesado (probar billones de nonces hasta acertar).
+      </p>
+    </section>
+
+    <section id="module3">
+      <h2>Hash rate, recompensa y Halving</h2><br>
+      <p>
+        <a style="color: red; font-weight: 700;">HASH RATE</a>
+        <br>
+        El Hash Rate es la velocidad o la potencia de cálculo combinada de todas las 
+        computadoras (mineros) que están intentando resolver el acertijo matemático de 
+        Bitcoin en un momento dado. <br><br>
+        Se mide en: Hashes por segundo ($H/s$). Hoy en día la red de Bitcoin opera en 
+        escalas de EH/s (Exahashes por segundo), lo que significa quintillones de intentos 
+        por segundo. <br>
+        ¿Por qué importa? A mayor Hash Rate, más segura es la red. 
+        Si el Hash Rate es extremadamente alto, se vuelve imposible para un atacante 
+        malintencionado juntar la suficiente potencia de cómputo para alterar las 
+        transacciones. <br><br> 
+        <a style="color: darkblue">El Hash Rate sube cuando entran más mineros (o máquinas más 
+          potentes) y baja si los mineros apagan sus equipos porque no les resulta rentable.</a>
+        <br><br><br>
+        <a style="color: red; font-weight: 700;">LA RECOMPENSA</a>
+        <br>
+        Bueno, el paso 4 era la recompensa pero no me detuve a explicarlo a detalle:
+        <br><br>
+        La recompensa se compone de 2 partes: <br>
+        Recompensa Total = Subsidio de Bloque (Bitcoins nuevos) + Comisiones de transacción
+        <br><br>
+        - Subsidio de bloque: Bitcoins recién creados que el protocolo emite desde cero. 
+        Es la única forma en la que nacen nuevos bitcoins en el mundo. <br>
+        - Comisiones (Fees): El total de las pequeñas propinas que pagaron los usuarios en 
+        la Mempool para que sus transacciones fueran procesadas rápidamente en ese bloque.
+        <br><br><br>
+        <a style="color: red; font-weight: 700;">EL HALVING</a><br>
+        <br>
+        si se crean nuevas bitcoins para los mineros (subsidio del bloque) entonces porque 
+        se dice que solo existen 21 millones de bitcoins? <br><br>
+        El Halving (reducción a la mitad) es un evento programado en el código de Bitcoin 
+        que ocurre exactamente cada 210,000 bloques (aproximadamente cada 4 años).
+        Su función es reducir a la mitad el subsidio de bloque (los bitcoins nuevos que se 
+        emiten). Satoshi Nakamoto diseñó esto para garantizar que solo existan 21 millones 
+        de bitcoins en la historia y evitar la inflación.
+      </p>
+    </section>
+    
+    <section id="module4">
+      <h2>Pools de minería, ASIC vs GPU y consumo energético</h2>
+      <p>
+        <a style="color: red; font-weight: 700; font-size: 20px;">ASIC vs. GPU (el hardware)</a>
+        <br><br>
+        En los primeros días de Bitcoin (2009-2010), la gente minaba utilizando el procesador de su 
+        computadora (CPU). Con el tiempo, la dificultad aumentó y los mineros buscaron chips más potentes pero los procesadores
+        comunes no eran suficiente por lo que buscaron soluciones y encontraron 2:
+        <br><br>
+        <b>GPU: </b> <br>
+        - Son las famosas tarjetas de video estándar que se usan en las computadoras para videojuegos o diseño 3D (Nvidia, AMD).
+        - Puede calcular algoritmos de minería, pero también procesar gráficos o renderizar video. <br>
+        - El problema: Ya no sirve para minar Bitcoin (su potencia no alcanza frente a la dificultad actual). Sin embargo, aún se utiliza 
+        para minar otras criptomonedas cuyos algoritmos previenen el uso de chips especializados.
+        <br><br>
+        <b>ASIC</b> <br>
+        - Es un chip diseñado en silicio con un único propósito exclusivo en la vida: calcular el algoritmo SHA-256 de Bitcoin 
+        lo más rápido posible. <br>
+        - ASIC no puede renderizar un video ni abrir un navegador; solo procesa hashes de Bitcoin. <br>
+        - Es miles de veces más eficiente y rápido que miles de GPUs juntas para Bitcoin.
+        <br><br><br>
+        <a style="color: red; font-weight: 700; font-size: 20px;">Mining Pools (Pools de minería)</a><br>
+        Hoy en día, el Hash Rate global de Bitcoin es tan ridículamente alto que si conectas un solo equipo ASIC en tu casa, 
+        la probabilidad de que tu máquina adivine el Nonce antes que el resto del mundo es casi cero. Literalmente, podrías pasar 10 años 
+        con la máquina encendida sin ganar un solo centavo. Para resolver esto, nacieron los Pools de minería: <br><br>
+        Un Pool es una cooperación de miles de mineros pequeños y medianos repartidos por el mundo que combinan la potencia 
+        de cálculo de sus computadoras para actuar como un solo minero gigante. <br><br>
+        <b>El beneficio:</b> En lugar de esperar años para acertar un bloque por tu cuenta y ganar la recompensa completa, al unirte 
+        a un pool recibes pagos pequeños, constantes y diarios proporcionales a la potencia de cómputo que aportaste a la red.
+        <br><br><br>
+        <a style="color: red; font-weight: 700; font-size: 20px;">Consumo energético: ¿Por qué consume tanta electricidad?</a><br>
+        La seguridad de Proof of Work se basa en el gasto de energía del mundo real. Para intentar falsificar una transacción en 
+        la blockchain, un atacante no solo necesita software (programas): necesita comprar millones de dólares en equipos físicos 
+        y pagar facturas de luz gigantescas para moverlos. La electricidad actúa como un ancla al mundo físico que protege el 
+        registro digital.
+      </p>
+    </section>
+    
+  </main>
+
+  <script type="module" src="../../scripts/scrip_sidenav.js"></script>
+</body>
+</html>

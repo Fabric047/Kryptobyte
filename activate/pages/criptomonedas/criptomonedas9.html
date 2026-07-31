@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Activate: Criptomonedas 9</title>
+  <link rel="stylesheet" href="../../styles/style_pages.css">
+  <link rel="icon" href="../../../media/Logo_Windows.png">
+</head>
+<body>
+
+  <div class="mobile-toggle" aria-hidden="false">
+    <button id="hamburger" aria-controls="primary-sidebar" aria-expanded="false" aria-label="Toggle navigation">
+      ☰
+    </button>
+    <div style="margin-left:.6rem;font-weight:600">Ethereum</div>
+  </div>
+
+  <!-- Left sidebar -->
+  <aside id="primary-sidebar" class="sidebar" aria-label="Primary navigation">
+    <div class="brand" role="img" aria-hidden="false">
+      <span class="logo" aria-hidden="true"><img src="../../../media/Logo_Windows.png" alt="Logo" style="width: 100%;"></span>
+      <span class="title">Ethereum</span>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="../criptomonedas.html">Regresar</a></li>
+        <li><a href="criptomonedas8.html">8. Ethereum</a></li>
+        <li><a href="criptomonedas9.html" aria-current="page">9. Gas y ETH</a></li>
+        <li><a href="criptomonedas10.html">10. Tokens y NFTs</a></li>
+        <li><a href="criptomonedas11.html">11. Stablecoins</a></li>
+        <li><a href="criptomonedas12.html">12. DeFi</a></li>
+      </ul>
+    </nav>
+
+    <div style="margin-top:auto;padding:1rem;font-size:.85rem;color:rgba(255, 255, 255, 0.6)">
+      Kryptobyte - Activate
+    </div>
+  </aside>
+
+
+  <main class="main" id="content" tabindex="-1">
+    <h1>Gas y ETH: ¿Cómo se pagan las transacciones?</h1><br>
+    <p>
+      Bueno, ya sabemos que ETH (Ether) es la criptomoneda nativa de la blockchain de 
+      Ethereum.
+    </p>
+    <section id="module1">
+      <h2>¿Qué es Gas?</h2>
+      <p>
+        El Gas no es una criptomoneda, sino que es como una unidad de medida de trabajo
+        computacional y es necesario para ejecutar una acción en la red Ethereum. <br>
+        Cada cosa que se hace en Ethereum (enviar ETH, etc) requiere capacidad de cómputo.
+        El Gas mide cuánto esfuerzo exige cada operación o cosa que hagamos.
+        <br><br>
+        Por ejemplo: <br>
+        - Enviar ETH: Es una acción simple por lo que requiere poca cantidad de Gas. <br>
+        - Intercambiar un token o usar DeFi (explicare estos conceptos en los siguientes 
+        módulos): Es una acción compleja por lo que requiere mayor cantidad de Gas. <br>
+      </p>
+    </section>
+
+    <section id="module2">
+      <h2>¿Cómo se calcula la tarifa total (Gas Fee)?</h2><br>
+      <p>
+        Primero hay que saber que las tarifas/comisiones de transacciones se pagan en 
+        <a style="color: blue">Gwei</a> que es una fracción muy pequeña de ETH. <br>
+        <a style="color: blue; font-weight: 700;">1 ETH = 1,000,,000,000 Gwei</a>
+        <br><br><br>
+        La tarifa total se calcula multiplicando 2 cosas: <br>
+        <a style="color: blue; font-weight: 700;">Tarifa total = [Unidades de gas usado] x [base fee + Tip]</a>
+        <br><br>
+        - Base fee: Es la cantidad mínima obligatoria por unidad de gas fijada automáticamente 
+        por la red según la congestión. <br>
+        - Tip: En español significa propina. Si quieres enviar dinero a un amigo o comprar algo y quieres
+        el pago o transaccion se complete más rápido. Tú puedes añadir un poco más de dinero extra 
+        para que funcione como un incentivo para los mineros. Ellos verán que, como agregastes más dinero
+        en propina, las ganancias son mayores para ellos y te darán prioridad. <br>
+        <br><br>
+      </p>
+    </section>
+
+    <section id="module3">
+      <h2>¿Por qué las tarifas de gas son a veces tan altas?</h2><br>
+      <p>
+        Esto tiene que ver con el "Tip" (también se le llama Priority fee). <br>
+        Ethereum tiene una capacidad limitada de procesamiento por bloque. Cuando miles de 
+        personas intentan realizar transacciones al mismo tiempo: <br><br>
+        1. El espacio en el bloque se vuelve escazo. <br>
+        2. Los usuarios compiten aumentando su Tip o Priority Fee para ser incluidos primero. <br>
+        3. Además, la Base Fee sube automáticamente para autorregular el tráfico. <br>
+        <br><br>
+      </p>
+    </section>
+
+    
+  </main>
+
+  <script type="module" src="../../scripts/scrip_sidenav.js"></script>
+</body>
+</html>

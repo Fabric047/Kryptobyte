@@ -146,7 +146,9 @@ a:focus {
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
     border-radius: 6px
 }
-
+section{
+    margin-top:3rem;
+}
 section h2{
     color: red;
     border-top: 2px solid blue;
