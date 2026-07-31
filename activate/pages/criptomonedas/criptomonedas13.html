@@ -6,6 +6,32 @@
   <title>Activate: Criptomonedas 13</title>
   <link rel="stylesheet" href="../../styles/style_pages.css">
   <link rel="icon" href="../../../media/Logo_Windows.png">
+<style>
+
+    .table-container{
+        max-width:1100px;
+        margin:auto;
+        overflow-x:auto;
+    } table{
+        width:100%;
+        border-collapse:collapse;
+        background:white;
+        box-shadow:0 5px 15px rgba(0,0,0,.1);
+    } th{
+        background:blue;
+        color:white;
+        padding:14px;
+        text-align:left;
+    } td{
+        padding:14px;
+        border-bottom:1px solid #ddd;
+        vertical-align:top;
+    } tr:nth-child(even){
+        background:#f8fafc;
+    } tr:hover{
+        background:#eef5ff;
+    }
+</style>
 </head>
 <body>
 
@@ -41,18 +67,241 @@
     <h1>BTC y ETH no lo son todo</h1>
 
     <section id="module1">
-      <h2>Solana, Avalanche, BNB Chain, Polygon, Sui, Aptos</h2>
-
+      <h2>Layers 1 y 2</h2><br>
+      <p>
+        Las redes se dividen en Capas (Layers) principalmente para resolver el Trilema 
+        Blockchain: un concepto que dice que es casi imposible que una red de bloques sea 
+        descentralizada, segura y escalable al mismo tiempo. <br><br>
+        <a style="color: red; font-size: 20px; font-weight: 700;">Redes de capa 1</a>
+        <br>
+        Una red de capa 1 es un blockchain principal e independiente. <br>
+        Ejemplos: Bitcoin, Ethereum, Solana, BNB Chain, Monero, etc. <br><br>
+        La función? Mantener el "libro mayor", ejecutar consensos (como Proof of Work)
+        garantizando la seguridad global y líquida las transacciones. <br><br>
+        <a style="color: blue;">El problema de la capa 1:</a> <br>Para que una red de capa 1 como Ethereum sea extremadamente 
+        segura y descentralizada, debe mantener ciertos límites. <br> No puedes hacer que los bloques 
+        sean gigantescos o muy rápidos, porque solo las supercomputadoras de grandes 
+        empresas podrían procesarlos, perdiendo la descentralización. <br>
+        Como consecuencia, Ethereum solo puede procesar unas 15 a 30 transacciones por 
+        segundo (TPS). Cuando millones de personas quieren usar la red al mismo tiempo, las 
+        comisiones (gas) se disparan en precios. <br><br>
+        L1 y L2 significan Layer 1 y Layer 2. Lo voy a abreviar porque me cansa escribir mucho texo
+        <br><br><br>
+        <a style="color: red; font-size: 20px; font-weight: 700;">Redes de capa 2</a>
+        <br><br>
+        Es una red secundaria construida encima de una L1. Su objetivo es asumir el trabajo 
+        pesado para descongestionar a la L1. <br><br>
+        <a style="color: red; font-weight: 700;">¿Cómo funciona técnicamente una L2?</a>
+        <br><br>
+        Para explicarlo, pondré el ejemplo de la red L2 más popular en Ethereum que se llama
+        Rollup: <br><br>
+        1. Ejecución fuera de la L1 principal (Ethereum): Tú haces una transacción en la L2 
+        (por ejemplo, intercambias un token). La L2 procesa tu transacción en milisegundos 
+        y cobra un centavo de dólar. <br><br>
+        2. Empaquetado: La L2 toma tu transacción junto con miles de transacciones de otros 
+        usuarios y las "comprime" en un solo paquete de datos. <br><br>
+        3. De regreso a la L1: La L2 envía ese paquete comprimido y una prueba matemática 
+        a la red principal de Ethereum. Ethereum valida la prueba y guarda el paquete con 
+        toda la seguridad de su red. <br>
+      </p>
     </section>
 
     <section id="module2">
-      <h2></h2>
+      <h2>Redes de capa 1</h2><br>
+      <p>
+        No hay mucho que decir aquí. Ya te expliqué sobre la Bitcoin y Ethereum. <br><br>
+        Aunque hay muchas redes de blockchain (más de 1000) y criptomonedas.
+        Por ejemplo: Solana (SOL), BNB Chain (BNB), TRON (TRX), Avalanche (AVAX), Cardana (ADA),
+        SUI (SUI), Aptos (APT), Near (NEAR), Kaspa (KAS), Monero (XMR), etc. <br>
+        Debido a eso, solo pondré algunas de las más conocidas y usadas: <br><br><br>
+        <a style="color: red; font-size: 20px; font-weight: 700;">Solana (SOL)</a>
+        <br><br>
+        <img src="galeria/solana.png" alt="solana.png" style="width: 50%;">
+        <br><br>
+        La red de blockchain se llama Solana y la criptomoneda se llama SOL. <br>
+        Fue diseñada para procesar transacciones digitales a alta velocidad y con costes 
+        muy bajos. Fue creada en 2017 por Anatoly Yakovenko y lanzada oficialmente en 2020 
+        con el objetivo de competir directamente con Ethereum. <br>
+        Parecido a Ethereum, puedes crear aplicaciones descentralizadas (dApps), finanzas 
+        cripto (DeFi), coleccionables (NFTs) y sistemas de pagos. <br><br>
+        <a style="color: red; font-weight: 700;">¿Cuál es su innovación?</a> <br><br>
+        Mientras que redes como Bitcoin o Ethereum pueden volverse lentas o demasiado 
+        caras en momentos de alto tráfico, Solana resuelve esto combinando dos mecanismos 
+        de consenso principales: <br>
+        - Proof of History (PoH): En lugar de que todos los nodos de la red tengan que 
+        ponerse de acuerdo constantemente sobre la hora exacta en que ocurrió cada transacción, 
+        PoH adjunta una marca de tiempo inmutable antes de procesarla. Esto reduce drásticamente 
+        el tiempo de verificación. <br>
+        - Proof of Stake (PoS) Delegado: Validadores distribuidos por todo el mundo aseguran 
+        la red procesando los bloques organizados previamente por el reloj de PoH. <br><br>
+        Gracias a todo esto, la red Solana ofrece: <br>
+        - Buen rendimiento: Tiene la capacidad de decenas de miles de transacciones por 
+        segundo. <br>
+        - Confirmación casi instantánea: Transacciones liquidadas en menos de un segundo.<br>
+        - Tarifas mínimas: Un promedio inferior a $0.001 por transacción. <br><br>
+        Considero que el único desafio son los requisitos de hardware (tu computadora o 
+        nodo) elevados: Ejecutar un nodo validador completo requiere equipos costosos, lo 
+        que genera debates sobre su nivel de descentralización en comparación con otras 
+        redes ya que no todas las computadoras pueden procesar la información. <br>
 
+        <br><br>
+        <a style="color: red; font-size: 20px; font-weight: 700;">BNB Chain (BNB)</a>
+        <br><br>
+        <img src="galeria/bnb-chain.jpg" alt="bnb-chain.jpg" style="width: 50%;">
+        <br><br>
+        BNB Chain nació impulsado por Binance (el exchange de criptomonedas más grande 
+        del mundo) por lo que se pensó que iba a ser centralizado pero hoy en día opera como 
+        una red descentralizada comunitaria enfocada en la economía Web3, videojuegos, 
+        finanzas descentralizadas (DeFi) y almacenamiento. <br><br>
+        <a style="color: red; font-weight: 700;">Su arquitectura:</a><br><br>
+        1. BNB Smart Chain (BSC): Es la red principal (capa 1) donde se ejecutan las 
+        aplicaciones descentralizadas (dApps), los juegos y los protocolos DeFi. <br><br>
+        2. opBNB (Capa 2): Una solución de escalabilidad basada en Optimistic Rollups.
+        Permite procesar más de 4,000 transacciones por segundo con comisiones inferiores 
+        a $0.001 USD. Explicare más sobre Optimistic Rollups en el siguiente módulo (Layer 2). <br> <br>
+        3. BNB Greenfield: Es una red descentralizada diseñada para el almacenamiento seguro 
+        de datos e archivos en la Web3, integrada directamente con los contratos 
+        inteligentes de BSC. <br><br>
+        A diferencia de Bitcoin (que usa minería) o Ethereum (que usa Proof of Stake tradicional), 
+        BNB Chain emplea un sistema híbrido llamado Proof of Staked Authority (PoSA):
+        <br>
+        1. Hay menos validadores: La red es mantenida por un número limitado de validadores 
+        activos que rotan y validan los bloques. <br>
+        2. Los validadores y delegadores bloquean (hacen staking) de sus tokens BNB como 
+        garantía para mantener la red segura. <br>
+        3. Este modelo permite tiempos de bloque de unos 3 segundos y comisiones 
+        muy bajas. El problema es que, al haber menos validadores, la convierte en una red 
+        más centralizada que Ethereum o Bitcoin. <br>
+        <br><br>
+        
+        <a style="color: red; font-size: 20px; font-weight: 700;">Avalanche (AVAX)</a>
+        <br><br>
+        <img src="galeria/avalanche.jpg" alt="avalanche.jpg" style="width: 50%;">
+        <br><br>
+        Fue lanzada en septiembre de 2020 por la empresa Ava Labs y fue diseñada para 
+        ofrecer escalabilidad, seguridad y descentralización de forma simultánea. <br>
+        Es conocida principalmente por su capacidad de procesar miles de transacciones por 
+        segundo con una finalización casi instantánea (menos de 1-2 segundos) y comisiones 
+        de red muy bajas. <br><br>
+        <a style="color: red; font-weight: 700;">Su arquitectura:</a><br><br>
+        1. X-Chain (E xchange Chain): Se encarga de la creación, gestión e intercambio 
+        de activos digitales y tokens (incluyendo AVAX que es la moneda nativa de Avalanche). <br>
+        2. C-Chain (Contract Chain): Es la cadena donde se ejecutan los smart contracts y 
+        las dApps. Lo chevere aquí es que es totalmente compatible con la EVM (Ethereum 
+        Virtual Machine), lo que permite a los programadores de Ethereum migrar sus apps fácilmente. <br>
+        3. P-Chain (Platform Chain): Coordina los nodos validadores, rastrea la actividad de la red y 
+        permite la creación de nuevas cadenas personalizadas. <br><br>
+        <a style="color: red; font-weight: 700;">Mecanismo de concenso:</a><br><br>
+        El gran avance de Avalanche es su novedoso mecanismo de consenso. En lugar de usar 
+        la minería tradicional (Proof of Work) o la votación clásica de Proof of Stake 
+        (donde cada nodo habla con todos los demás), Avalanche utiliza un sistema de 
+        muestreo subconjunto aleatorio. Aquí te lo explico: <br>
+        Cuando un nodo necesita validar una transacción, le pregunta a un pequeño grupo 
+        aleatorio de otros nodos. Si la mayoría coincide, el nodo adapta esa decisión y 
+        repite la pregunta a otro grupo. Este proceso se expande en cascada a través de toda 
+        la red rápidamente hasta alcanzar un consenso casi instantáneo sobre el estado final. <br>
+        <br><br><br>
+        También debería explicar la red Monero cuya moneda es XMR pero eso lo haré
+        <a href="criptomonedas16.html#xmr">aquí</a> ya que es una moneda con un propósito muy 
+        diferente a las demás (privacidad) pero, por ahora, continuemos.
+      </p>
     </section>
 
-    <section id="module3">
-      <h2></h2>
+    <section>
+      <h2>Comparativa entre las 3 redes L1 que hemos aprendido:</h2>
+      <table>
+        <thead>
+            <tr>
+                <th>Criterio</th>
+                <th>Solana</th>
+                <th>BNB Chain</th>
+                <th>Avalanche</th>
+            </tr>
+        </thead>
 
+        <tbody>
+
+            <tr>
+                <td>Mecanismo de Consenso</td>
+                <td>PoH + PoS</td>
+                <td>PoSA (Proof of Staked Authority)</td>
+                <td>Consenso Avalanche (Probabilístico)</td>
+            </tr>
+
+            <tr>
+                <td>Suministro Máximo de Cripto Nativa</td>
+                <td>Sin Límite (Infinito)</td>
+                <td>200 Millones</td>
+                <td>720 Millones</td>
+            </tr>
+
+            <tr>
+                <td>Tiempo hasta Finalidad</td>
+                <td>~400 ms</td>
+                <td>~3 segundos</td>
+                <td>&lt; 1 segundo</td>
+            </tr>
+
+            <tr>
+                <td>Velocidad de Transacción (TPS)</td>
+                <td>65,000+ TPS</td>
+                <td>~2,000 TPS</td>
+                <td>4,500+ TPS</td>
+            </tr>
+
+            <tr>
+              <td>Ventajas</td>
+              <td>Velocidad extrema, costos muy bajos, ecosistema grande (DeFi, nuevas herramientas, etc)</td>
+              <td>Alta liquidez, rápido comparado con Ethereum, compatible con EVM, modelo deflacionario (su mecanismo "quema" BNB)</td>
+              <td>arquitectura de subredes (permite que la gente cree su propia blockchain personalida), compatible con EVM,
+                alta tolerancia a fallos (dificilmente tiene errores), es rápido (menos de 1 segundo)
+              </td>
+            </tr>
+            
+            <tr>
+                <td>Comisión Promedio</td>
+                <td>~$0.00025 USD</td>
+                <td>~$0.10 USD</td>
+                <td>~$0.05 USD</td>
+            </tr>
+
+            <tr>
+              <td>Desventajas</td>
+              <td>Validadores costosos (el costo de hardware para los nodos es alto), ha experimentado caídas cuando 
+                hay mucho tráfico, menos validadores (mas centralizado) ya que hay menos validadores por el costo de hardware
+              </td>
+              <td>Mucha centralización ya que hay muy pocos validadores activos (21 a 40 aprox) y eso aumenta el riesgo a censura,
+                las tarifas pueden incrementarse temporalmente cuando el mercado registra una actividad inusualmente alta
+              </td>
+              <td>Dividir la red en múltiples subredes puede fragmentar el capital y a los usuarios, en momentos de alta demanda puede ser más costoso que en Solana,
+                su ecosistema empresarial de subredes todavía está en proceso por lo que su ecosistema es chico aún.
+              </td>
+            </tr>
+
+            <tr>
+                <td>Lenguaje para Smart Contracts</td>
+                <td>Rust, C, C++</td>
+                <td>Solidity</td>
+                <td>Solidity, Go</td>
+            </tr>
+
+        </tbody>
+    </table><br>
+    <p>
+      Te has dado cuenta que en el cuadro dice que la moneda SOL de Solana no tiene un 
+      límite a diferencia de las otras o Bitcoin que tiene solo 21 millones? <br>
+      Esto se debe a que Solana contrarresta la creación de nuevos tokens. <br>
+      Solana implementa un mecanismo deflacionario: el 50% de cada comisión de 
+      transacción realizada en la red es quemada (destruida para siempre). <br>
+      - Si la red tiene poco uso: La emisión de staking aumenta ligeramente el suministro 
+      total para seguir manteniendo seguros a los validadores. <br>
+      - Si la red se usa masivamente: La cantidad de transacciones quema tanto SOL que la 
+      inflación neta se frena drásticamente. <br><br><br>
+      Otra cosa más que quiero comentar es que: Si no eres programador, tal vez no entiendas
+      lo último sobre los lenguajes para smart contracts. <br>
+      Rust, C++, C, Solidity, Go, etc son lenguajes de programación y sirven para crear 
+      aplicaciones, programas de celular, etc.
+    </p>
     </section>
 
     
