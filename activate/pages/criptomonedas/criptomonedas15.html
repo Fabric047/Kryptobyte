@@ -44,18 +44,95 @@
     <h1>Privacidad</h1>
 
     <section id="module1">
-      <h2>Es Bitcoin realmente privado?</h2>
+      <h2>Es Bitcoin realmente privado?</h2><br>
+      <p>
+        Muchos piensan que Bitcoin es privado y anónimo pero no es lo para nada debido a lo siguiente: <br><br>
+        1. La blockchain: Todas las transacciones de Bitcoin quedan registradas para siempre en un historial público y descentralizado. 
+        Cualquiera puede ver el historial completo de movimientos de una dirección, cuánto dinero tiene y hacia dónde se transfiere. <br>
+        La gente no puede saber quién eres pero pueden ver tu dirección. <br><br>
+        2. Bitcoin es <a style="color: blue">seudónimo</a>, no anónimo: Las cuentas no están registradas a nombre de una persona, 
+        sino a través de direcciones (como una clave pública o un monedero). Sin embargo, si en algún momento vinculas esa dirección 
+        con tu identidad del mundo real,por ejemplo, al comprar bitcoins en un exchange centralizado que te pida verificación de 
+        identidad o al dar tus datos para recibir un envío de algún producto a tu casa, cualquier persona o gobierno
+        con herramientas de análisis de blockchain podrá rastrear tu historial financiero completo y, si sabe investigar bien, puede descubrir
+        quién eres tú. <br><br>
+        Para lograr privacidad en Bitcoin se deben aplicar técnicas avanzadas y buenas prácticas (como 
+        el uso de múltiples monederos independientes, evitar utilizar la misma dirección o enrutar conexiones mediante 
+        herramientas como Tor), pero por defecto deja un rastro digital permanente y público. <br><br>
+      </p>
 
     </section>
 
     <section id="module2">
-      <h2>Monero y Zcash</h2>
-
+      <h2>Monero y Zcash</h2><br>
+      <p>
+        Monero (XMR) y Zcash (ZEC) son las dos criptomonedas centradas en la privacidad más populares del mercado pero tienen notables 
+        diferencias. <br><br>
+        <a style="color: red; font-weight: 700; font-size: 20px;">Monero (XMR)</a><br><br>
+        Monero se diseñó bajo la premisa de que la privacidad debe ser obligatoria para todos los usuarios. En su red 
+        no existen transacciones públicas ni saldos visibles. Te pongo sus tecnologías clave: <br><br>
+        - Stealth Addresses (direcciones de sigilo): Generan una dirección única y aleatoria de un solo uso para cada transacción.
+        En la Bitcoin, tú tienes solo 1 dirección. <br><br>
+        - Ring Signatures (Fórmulas de anillo): Monero mezcla la firma del remitente real con señuelos sacados del historial de la red, 
+        de modo que es matemáticamente imposible determinar quién inició el pago. <br>
+        - RingCT (Ring Confidential Transactions): Oculta la cantidad exacta de dinero que se envió. <br>
+        - Minería descentralizada: Utiliza un algoritmo llamado RandomX, diseñado para ejecutarse 
+        en CPU convencionales en lugar de potentes hardware ASIC<br><br>
+        <img src="galeria/monero.jpg" alt="monero.jpg" style="width: 50%;">
+        <br><br>
+        Ventaja: Es totalmente privado. <br><br>
+        Desventaja: A los gobiernos y otras organizaciones les da miedo que sea totalmente anónima por lo que ha 
+        sido retirada de muchos exchanges regulados ya que se puede usar en lavados de dinero y otros crimenes. <br>
+        <br><br><br>
+        <a style="color: red; font-weight: 700; font-size: 20px;">Zcash (ZEC)</a><br>
+        Fue creado por científicos del MIT, Johns Hopkins y otras instituciones. Introduce matemáticas avanzadas para 
+        dar la opción de hacer transacciones privadas. <br><br>
+        - Privacidad opcional: A difencia de Monero donde la privacidad es obligatoria, en ZEC puedes elegir 
+        enviar transacciones transparentes (visibles como las de Bitcoin) o blindadas. <br><br>
+        - Su criptografía llamada Zero-Knowledge es considerada una joyita matemática xd. El nivel de anonimato 
+        en una transacción blindada entre dos direcciones ocultas es teóricamente perfecto. <br><br>
+        <img src="galeria/zcash.jpg" alt="zcash.jpg" style="width: 50%;">
+        <br><br>
+        Ventaja: Dado que la privacidad es opcional, la mayoría de los usuarios deciden interactuar de forma transparente y sin 
+        anonimato por lo que es aceptado en más tiendas y no es tan evitada por organizaciones como Monero. <br><br>
+        Desventaja: Precisamente debido a que la mayoría de los usuarios interactúan mediante direcciones transparentes. 
+        Esto reduce el grupo de anonimato (anonymity set) y facilita la trazabilidad cuando se mezclan fondos entre direcciones 
+        públicas y privadas.
+      </p>
     </section>
 
     <section id="module3">
-      <h2>Ring signatures, stealth addresses y confidential transactions</h2>
-
+      <h2>Ring signatures, stealth addresses y confidential transactions</h2><br>
+      <p>
+        Estas tres tecnologías son de Monero y fueron diseñadas para ocultar 3 cosas claves de 
+        cualquier transacción financiera: quién recibe, quién envía y cuánto se envía. <br><br>
+        <a style="color: red; font-size: 20px;">Stealth Addresses (Oculta al quién recibe el dinero)</a><br>
+        1. Le das tu dirección pública a la persona que te va a pagar. <br>
+        2. Al iniciar el envío, el software del quien te envia el dinero usa <a style="color: blue" href="criptomonedas6.html">criptografía de curva elíptica</a> para generar automáticamente 
+        una dirección única de un solo uso (one-time address) registrada en la blockchain. <br>
+        3. Solo tu clave privada puede identificar y reclamar los fondos asociados a esa dirección única. <br><br>
+        Resultado: Ningún observador externo puede vincular la transacción con tu dirección pública real, ni saber cuántas transacciones has recibido en total.
+        <br><br><br>
+        <a style="color: red; font-size: 20px;">Ring Signatures (oculta al quien envia el dinero)</a><br>
+        En Bitcoin, firmas digitalmente la transacción con tu clave privada para demostrar que posees los fondos, lo cual 
+        conecta directamente tu identidad analítica con el origen del dinero.Las Ring Signatures (firmas de anillo) mezclan tu 
+        firma con la de otros usuarios para crear una "malla de firmas". <br><br>
+        1. Cuando envías dinero, el protocolo selecciona automáticamente entradas del historial de la 
+        blockchain para usarlas como señuelos (decoys). <br>
+        2. Tu transacción combina tu firma real con las claves públicas de esos señuelos en un solo "anillo". <br>
+        3. La red valida criptográficamente que alguien del grupo autorizó la transacción y que los fondos son válidos, 
+        pero matemáticamente es imposible determinar cuál de los miembros del anillo es el emisor real. <br><br>
+        Resultado: Tu transacción queda oculta entre una multitud de posibles orígenes. <br><br><br>
+        <a style="color: red; font-size: 20px;">RingCT / Confidential Transactions (Ocultan el monto de dinero enviado)</a> <br>
+        Incluso si ocultas al emisor y al receptor, saber la cantidad enviada permite rastrear transacciones mediante patrones 
+        numéricos (por ejemplo, rastrear un envío de un valor muy específico como 4.8193 XMR). <br><br>
+        1. Utiliza un compromiso criptográfico denominado Pedersen Commitment. <br>
+        2. Permite que los nodos de la red verifiquen matemáticamente la regla fundamental del sistema sin ver el número real:
+        Entradas = Salidas + Comisión. <br>
+        3. Para evitar que un atacante envíe números negativos (creando dinero de la nada), incluye Pruebas de Rango (Bulletproofs), 
+        que demuestran que el monto es mayor a cero sin revelar la cifra exacta. <br><br>
+        Resultado: La cantidad transferida queda completamente secreta para todos, excepto para las partes involucradas en el pago.
+      </p>
     </section>
 
     
