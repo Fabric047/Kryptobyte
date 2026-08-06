@@ -24,7 +24,7 @@
        <loc>https://krypto-byte.com/aboutme/sobre-mi</loc>
        <lastmod>2026-08-06T15:28:07+00:00</lastmod>
        <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+       <priority>0.500</priority>
   </url>
   <url>
        <loc>https://krypto-byte.com/Cepre-Uni/Boletines/LIBRO%20MATEMÁTICAS%20I.pdf</loc>
@@ -168,13 +168,13 @@
        <loc>https://krypto-byte.com/activate/pages/criptomonedas</loc>
        <lastmod>2026-08-06T15:28:07+00:00</lastmod>
        <changefreq>daily</changefreq>
-       <priority>0.4096</priority>
+       <priority>0.8096</priority>
   </url>
   <url>
        <loc>https://krypto-byte.com/Cepre-Uni/maincepreuni</loc>
        <lastmod>2026-08-06T15:28:07+00:00</lastmod>
        <changefreq>daily</changefreq>
-       <priority>0.4096</priority>
+       <priority>0.6096</priority>
   </url>
   <url>
        <loc>https://krypto-byte.com/Cepre-Uni/Matematicas/ALGEBRA/EJERCICIOS/1ER%20MAT%20ESTUDIO%20PRE%202024-1.pdf</loc>
