@@ -5,6 +5,15 @@ body{
     height: 100vh;
 }
 
+#about-me p{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#about-me p a{
+    color: darkblue;
+    font-weight: 700;
+}
+
 /* STYLES OF THE NAV */
 nav{
     display: flex;
