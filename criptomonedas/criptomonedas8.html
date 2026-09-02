@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Activate: Criptomonedas 8</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="../../../media/Logo_Windows.png">
+</head>
+<body>
+
+  <div class="mobile-toggle" aria-hidden="false">
+    <button id="hamburger" aria-controls="primary-sidebar" aria-expanded="false" aria-label="Toggle navigation">
+      ☰
+    </button>
+    <div style="margin-left:.6rem;font-weight:600">Ethereum</div>
+  </div>
+
+  <!-- Left sidebar -->
+  <aside id="primary-sidebar" class="sidebar" aria-label="Primary navigation">
+    <div class="brand" role="img" aria-hidden="false">
+      <span class="logo" aria-hidden="true"><img src="../../../media/Logo_Windows.png" alt="Logo" style="width: 100%;"></span>
+      <span class="title">Ethereum</span>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="../criptomonedas.html">Regresar</a></li>
+        <li><a href="criptomonedas8.html" aria-current="page">8. Ethereum</a></li>
+        <li><a href="criptomonedas9.html">9. Gas y ETH</a></li>
+        <li><a href="criptomonedas10.html">10. Tokens y NFTs</a></li>
+        <li><a href="criptomonedas11.html">11. Stablecoins</a></li>
+        <li><a href="criptomonedas12.html">12. DeFi</a></li>
+      </ul>
+    </nav>
+
+    <div style="margin-top:auto;padding:1rem;font-size:.85rem;color:rgba(255, 255, 255, 0.6)">
+      Kryptobyte - Activate
+    </div>
+  </aside>
+
+
+  <main class="main" id="content" tabindex="-1">
+    <h1>Todo sobre Ethereum</h1>
+    La BTC es chevere pero olvidemosnos de ella por un momento y dejame introducirte a 
+    la otra gran criptomoneda: Ether
+
+    <section id="module1">
+      <h2>¿Por qué Ethereum?</h2><br>
+      <p>
+        Bitcoin fue diseñado para funcionar como oro digital (una reserva de valor e 
+        intercambio), Ethereum fue creado para ser una computadora mundial programable.
+        <br>
+        En 2013, un joven crack programador llamado Vitalik Buterin se dio cuenta de que la red 
+        de Bitcoin tenía un alcance limitado por diseño: solo permitía transferir valor de 
+        un punto A a un punto B. <br>
+        Vitalik propuso crear una red descentralizada sobre la 
+        cual cualquiera pudiera programar aplicaciones complejas sin depender de un 
+        servidor central ni de intermediarios (como bancos, notarías 
+        o aseguradoras). Así nació la red Ethereum en 2015. <br><br>
+        No hay que confundir Ethereum con Ether (ETH): <br>
+        - Ethereum: Es la red de blockchain. <br>
+        - Ether (ETH): Es la criptomoneda de la red Ethereum. <br><br><br>
+        <img src="galeria/ethereum.jpg" alt="ethereum.jpg" style="width: 40%;">
+        <br><br>
+        <a style="color: red; font-weight: 700;">ETH es competencia de BTC?</a><br><br>
+        La respuesta corta es NO son competencia directa. Aunque ambas son las 
+        criptomonedas más importantes del mercado, tienen propósitos completamente 
+        diferentes y fueron creadas para resolver problemas distintos. <br><br>
+        - BTC: Es dinero digital. <br>
+        Nació para ser un sistema monetario descentralizado. Su meta principal es ser una 
+        moneda global confiable. Por eso se le llama ORO DIGITAL. <br><br>
+        - ETH: Es una computadora global. <br>
+        Nació para ser una plataforma programable descentralizada. Su meta es permitir que 
+        personas creen aplicaciones sobre su red sin necesidad de servidores ni 
+        intermediarios centrales como Google Cloud o AWS (Amazon Web Services).
+        <br><br>
+        Por esa razón, ETH introduce algunos conceptos nuevos que no se ven en Bitcoin.
+        Por ejemplo: Smart Contracts, dApps, DeFi, etc. Lo vamos a ir viendo uno por uno
+        asi que no te preocupes. 
+      </p>
+    </section>
+
+    <section id="module2">
+      <h2>Smart Contracts</h2>
+      <p>
+        Los smart contracts (contratos inteligentes) son programas informáticos almacenados
+        en la red de blockchain que se ejecutan cuando se cumplen ciertas cosas.
+        <br>
+        Es como un contrato normal en papel pero es mucho mejor ya que: <br>
+        - Es autonomo: Se ejecuta por sí solo sin necesidad de un banco, abogado o notario. <br>
+        - Es inmutable: Una vez desplegado un contrato en la red Ethereum, su código no se 
+        puede modificar para nada. <br>
+        - Es transparente: El código y las transacciones asociadas son públicos y verificables 
+        por cualquiera en la blockchain. <br><br>
+        <img src="galeria/smart_contracts.png" alt="smart_contracts.png" style="width: 40%;">
+        <br><br>
+        ¿Cómo funciona? <br> <br>
+        El Smart Contract se compone de un código escrito en un lenguaje de programación
+        (el que se usa normalmente no es python, sino Solidity) y unos datos. <br>
+        - La persona que lo desarrolla programa las reglas del contrato y lo publica en la red. <br>
+        - Los usuarios envían una transacción al contrato para activar sus funciones (por ejemplo, 
+        enviar fondos o intercambiar un activo). <br>
+        - Luego se ejecuta en la EVM que lo explico abajo <br>
+      </p>
+    </section>
+
+    <section id="module3">
+      <h2>EVM (Ethereum Virtual Machine)</h2><br>
+      <p>
+        La EVM es el cerebro o motor de la red Ethereum. <br>
+        Es el entorno en donde se procesan y ejecutan los smart contracts y las transacciones
+        de la red. <br><br>
+        La blockchain de Bitcoin solo permitía transacciones simples (enviar y 
+        recibir BTC). Ethereum nació con la idea de ser una computadora descentralizada 
+        programable. <br>
+        Para lograr que miles de computadoras (nodos) alrededor del mundo ejecuten 
+        exactamente el mismo código y lleguen exactamente al mismo resultado, necesitaban 
+        una "máquina virtual" estandarizada que corriera en cada nodo. Esa es la EVM.
+        <br><br>
+        <img src="galeria/evm.png" alt="evm.png" style="width: 30%;">
+        <br><br>
+        <a style="color: red; font-size: 20px;">Principales características: </a>
+        <br><br>
+        1. Determinista: No importa si un nodo (computadora) es una Mac que está en Lima, o un 
+        windows en Arequipa. La EVM siempre producirá exactamente lo mismo. <br>
+        2. Aislamiento: El código que corre dentro de la EVM esta complemetamente aislado
+        de todo lo demás. Es decir, todo lo que pase dentro de la EVM (ej. un smart contract
+        tiene un virus) no le pasa nada a tu nodo. <br>
+        3. Es Turing completa: Esto significa que, conceptualmente, puede resolver cualquier problema computable 
+        o ejecutar cualquier algoritmo.
+        <br><br>
+        Hoy en día, la EVM no solo existe en Ethereum. Se ha convertido en el estándar de la industria cripto.
+        <br>Muchas otras blockchains son compatibles con EVM.
+      </p>
+    </section>
+
+    
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

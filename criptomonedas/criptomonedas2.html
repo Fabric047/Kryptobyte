@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Activate: Criptomonedas 2</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="../../../media/Logo_Windows.png">
+
+<style>
+  :root {
+    --circle-size: 34px;
+    --gap-between-items: 60px;
+  }
+
+  .timeline {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  /* Tablets y móviles grandes */
+  @media (max-width: 600px) {
+    body {
+      padding: 40px 20px;
+    }
+    :root {
+      --gap-between-items: 44px;
+    }
+    .content {
+      font-size: 14px;
+    }
+  }
+
+  /* Móviles pequeños */
+  @media (max-width: 380px) {
+    body {
+      padding: 30px 14px;
+    }
+    :root {
+      --circle-size: 28px;
+      --gap-between-items: 36px;
+    }
+    .circle {
+      font-size: 12px;
+    }
+    .content {
+      font-size: 13.5px;
+      padding-top: 4px;
+    }
+    .timeline-item {
+      column-gap: 14px;
+    }
+  }
+
+  .timeline-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: var(--circle-size) 1fr;
+    column-gap: 20px;
+    padding-bottom: var(--gap-between-items);
+  }
+
+  .timeline-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .marker {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .circle {
+    width: var(--circle-size);
+    height: var(--circle-size);
+    border-radius: 50%;
+    border: 1.5px solid #138486;
+    background: darkblue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 2;
+  }
+
+  /* línea punteada */
+  .timeline-item:not(:last-child) .marker::after {
+    content: "";
+    position: absolute;
+    top: var(--circle-size);
+    bottom: calc(-1 * var(--gap-between-items));
+    left: 50%;
+    border-left: 2px solid black;
+  }
+
+  .content {
+    padding-top: 6px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .content strong {
+    display: block;
+    margin-bottom: 2px;
+  }
+</style>
+
+</head>
+<body>
+
+  <div class="mobile-toggle" aria-hidden="false">
+    <button id="hamburger" aria-controls="primary-sidebar" aria-expanded="false" aria-label="Toggle navigation">
+      ☰
+    </button>
+    <div style="margin-left:.6rem;font-weight:600">Infraestructura</div>
+  </div>
+
+  <!-- Left sidebar -->
+  <aside id="primary-sidebar" class="sidebar" aria-label="Primary navigation">
+    <div class="brand" role="img" aria-hidden="false">
+      <span class="logo" aria-hidden="true"><img src="../../../media/Logo_Windows.png" alt="Logo" style="width: 100%;"></span>
+      <span class="title">Infraestructura</span>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="../criptomonedas.html">Regresar</a></li>
+        <li><a href="criptomonedas2.html" aria-current="page">2. Blockchain</a></li>
+        <li><a href="criptomonedas3.html">3. Red P2P y Nodos</a></li>
+        <li><a href="criptomonedas4.html">4. Wallets</a></li>
+      </ul>
+    </nav>
+
+    <div style="margin-top:auto;padding:1rem;font-size:.85rem;color:rgba(255, 255, 255, 0.6)">
+      Kryptobyte - Activate
+    </div>
+  </aside>
+
+
+  <main class="main" id="content" tabindex="-1">
+    <h1>Blockchain</h1>
+
+    <section id="module1">
+      <h2>¿Qué es un bloque?</h2><br>
+      <p>
+        Ahora vamos a comprender lo que es blockchain ya que muchas personas creen que 
+        blockchain y criptomonedas es lo mismo pero, aunque estan muy relacionados entre sí,
+        no son lo mismo. <br><br>
+        Blockchain significa, en español, cadena de bloques. Es literalmente un contenedor (una caja)
+        que no se puede modificar. Cada una de las cajas agrupa un conjunto de transacciones.
+        <br><br>
+        Para visualizarlo de forma sencilla: si la blockchain fuera el libro contable de un banco, un 
+        bloque sería una página individual llena de registros financieros y esas cosas. <br><br>
+        <img src="galeria/blockchain.jpg" alt="blockchain.jpg" style="width: 50%;">
+      </p>
+    </section>
+
+    <section id="module2">
+      <h2 id="hash">¿Qué es un hash?</h2><br>
+      <p>
+        Aqui nos metemos mas a conceptos de ciberseguridad pero no te asustes. Si deseas,
+        no hay problema en saltarte este modulo pero te recomiendo que lo leas para entender
+        mas a profundidad todo. Lo explicare de manera sencilla. <br><br>
+
+        Un <a style="color: red;">hash</a> es un programa matemático que toma cualquier
+        cosa que le metas (una palabra, bloque, etc) y la transforma en una cadena de letras y
+        números con un tamaño fijo: <br><br>
+      </p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="marker"><div class="circle">1</div></div>
+          <div class="content"><b>Entrada</b><br>Toma cualquier texto o archivo, sin importar si es una 
+              palabra corta como "Hola" o el texto de la Biblia completa.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="marker"><div class="circle">2</div></div>
+          <div class="content"><b>Algoritmo hash</b><br>El texto o archivo pasa por una fórmula matemática</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="marker"><div class="circle">3</div></div>
+          <div class="content"><b>Salida</b><br>El algoritmo genera un código de longitud fija.</div>
+        </div>
+
+      </div> <br>
+
+      
+      <p>
+        Hay varios algoritmos que son como fórmulas matemáticas para generar un hash. <br>
+        Algunos de los algoritmos más usados son: SHA-256, Argon2 (muy usado para contraseñas), Bcrypt, etc. <br>
+        Te pongo un par de ejemplos: <br><br>
+        - El hash de la palabra "hola" usando SHA-256: <br>
+        4d2b260902c3327d223f6686b3e94a8f902636f328ef727376c66cf404ebfa4b <br><br>
+        - El hash de la palabra "holA" usando SHA-256: <br>
+        f6913454b5df56f9e31d4e08f516a2d9c025d0c75c5e88bb0035048b1d9bf597 <br>
+        <br><br><br>
+        <a style="color: red; font-weight: 600; font-size: 20px;">Propiedades:</a>
+        Para entender por qué se usa en criptomonedas y tecnología, debes recordar estas propiedas: <br><br>
+        - Es de una via (No se puede revertir): Si ves el hash resultante, es matemáticamente imposible 
+        averiguar cuál era el texto original. Solo puedes ir de <i>Texto -> Hash</i> pero nunca
+        <i>Hash -> Texto</i> <br><br>
+        - Es único: Si pones la palabra "hola", siempre te dará el mismo hash exacto <br><br>
+        - Es super sensible: Si cambias una sola letra (agregas o borras una letra o número) 
+        o cambias una minúscula por una mayúscula, el hash completo cambia.
+        Por ejemplo: El hash es completamente diferente si cambias <i>hola</i> por <i>holA</i>
+      </p>
+    </section>
+
+    <section id="module3">
+      <h2>¿Qué contiene cada bloque?</h2><br>
+      <p>
+        <a style="color:red; font-size: 21px; font-weight: 600;">1. El encabezado</a> <br><br>
+        - Hash del bloque anterior: Por esta razon se llama "blockchain" o "cadena de bloques"
+        ya que todos los bloques estan conectados formando una cadena. <br><br>
+        - Merkle Root (raíz de Merkle): Es un único código hash que resume todas las 
+        transacciones contenidas en el cuerpo de ese bloque. <br><br>
+        - Timestamp: Fecha y hora exacta en la que se minó o generó el bloque.<br><br>
+        - Nonce: Un número aleatorio (hay que entender lo que es la minería primero). Más 
+        adelante veremos lo que es la minería. <br><br>
+        - Nivel de dificultad: Requerido, a nivel matemático, para validar el bloque. <br><br>
+        - Versión: El protocolo de red que sigue. <br><br>
+        <br><br>
+        <a style="color:red; font-size: 21px; font-weight: 600;">2. Cuerpo del bloque</a><br><br>
+        - Contador de transacciones: El número total de transacciones que están dentro del bloque. <br><br>
+        - Lista de transacciones: El registro detallado de las operaciones procesadas. 
+        Cada una incluye direcciones del remitente/destinatario, la cantidad transferida, 
+        las comisiones, etc. <br><br>
+        <br><br>
+        <a style="color:red; font-size: 21px; font-weight: 600;">¿Por qué esta estructura lo hace inalterable?</a>
+        <br><br>
+        Si un hacker intenta alterar una sola coma de una transacción pasada: <br><br>
+        1. Cambiaría la Raíz de Merkle <br>
+        2. Eso alteraría por completo el Hash del bloque actual. <br>
+        3. Al cambiar el Hash actual, el siguiente bloque (que dependía de este hash) perdería
+        el enlace y la red invalidaría todo el intento de fraude de inmediato. <br>
+      </p>
+    </section>
+
+    
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

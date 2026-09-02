@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Activate: Criptomonedas 14</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="../../../media/Logo_Windows.png">
+</head>
+<body>
+
+  <div class="mobile-toggle" aria-hidden="false">
+    <button id="hamburger" aria-controls="primary-sidebar" aria-expanded="false" aria-label="Toggle navigation">
+      ☰
+    </button>
+    <div style="margin-left:.6rem;font-weight:600">Expandiendo el ecosistema</div>
+  </div>
+
+  <!-- Left sidebar -->
+  <aside id="primary-sidebar" class="sidebar" aria-label="Primary navigation">
+    <div class="brand" role="img" aria-hidden="false">
+      <span class="logo" aria-hidden="true"><img src="../../../media/Logo_Windows.png" alt="Logo" style="width: 100%;"></span>
+      <span class="title">Expandiendo el ecosistema</span>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="../criptomonedas.html">Regresar</a></li>
+        <li><a href="criptomonedas13.html">13. Otras Blockchains</a></li>
+        <li><a href="criptomonedas14.html" aria-current="page">14. Layer 2</a></li>
+      </ul>
+    </nav>
+
+    <div style="margin-top:auto;padding:1rem;font-size:.85rem;color:rgba(255, 255, 255, 0.6)">
+      Kryptobyte - Activate
+    </div>
+  </aside>
+
+
+  <main class="main" id="content" tabindex="-1">
+    <h1>Layer 2</h1><br>
+    <p>
+      Ya sabemos que la blockchain de Bitcoin y Ethereum son súper seguras, pero lentas y 
+      volverse muy costosa cuando hay mucha demanda. Por eso se crearon redes de capa 2 (L2)
+    </p>
+
+    <section id="module1">
+      <h2>L2 de Bitcoin</h2><br>
+      <p>
+        <a style="color: red; font-weight: 700; font-size: 20px;">- Lightning Network</a>
+        <br><br>
+        Es un protocolo de canales de pago off-chain (fuera de la cadena) enfocado exclusivamente en hacer que Bitcoin sea rápido y barato de transferir.
+        <br>Lightning es puramente de capa 2 (solo usa BTC) por lo que no tiene y no necesita un token propio
+        <br><br>
+        Dos personas abren un "canal de pago" enviando fondos a una cuenta compartida en la 
+        blockchain principal. Una vez abierto, pueden intercambiar miles de transacciones al 
+        instante y por fracciones de centavo. Al terminar, cierran el canal y solo registran 
+        el saldo final en la red de Bitcoin. <br><br>
+        Casos de uso ideal: Pagar un cafecito, enviar propinas, microtransacciones comerciales e 
+        intercambios cotidianos instantáneos.
+        <br><br><br>
+        <a style="color: red; font-weight: 700; font-size: 20px;">- Stacks (STX)</a>
+        <br><br>
+        Stack permite ejecutar contratos inteligentes y aplicaciones dApps vinculando su 
+        estado directamente a Bitcoin. <br><br>
+        RSK es una cadena lateral (sidechain) que corre en paralelo a Bitcoin.
+        Tiene su propio token llamado rBTC que tiene el mismo valor que la BTC. 1rBTC = 1BTC. <br><br>
+        <a style="color: red; ">¿Entonces porqué se creó la rBTC si tiene el mismo valor que la BTC?</a> <br>
+        Se usa rBTC porque la red de Bitcoin original no entiende las instrucciones complejas del código de Ethereum (EVM), 
+        así que necesitas usar ese BTC "empaquetado" para pagar el gas y ejecutar las operaciones dentro de RSK. <br>
+        <br><br>
+        <a style="color: red; font-weight: 700;">¿Cómo funciona?</a> <br>
+        1. Utiliza un consenso propio llamado PoX (Proof of Transfer / Prueba de Transferencia). 
+        Los mineros transfieren BTC real para competir por tener tokens STX. <br>
+        2. Los titulares de STX pueden hacer "Stacking" (bloquear sus STX) para ayudar a 
+        validar la red y recibir recompensas directamente en BTC. <br><br>
+        Caso de uso ideal: Creación de NFTs nativos vinculados a Bitcoin, plataformas DeFi 
+        complejas y aplicaciones descentralizadas (dApps) con tokens propios.
+        <br><br><br>
+        <a style="color: red; font-weight: 700; font-size: 20px;">- Rootstock (RSK)</a>
+        <br><br>
+        Es una sidechain (cadena lateral) conectada a Bitcoin que trae la compatibilidad 
+        de Ethereum a la red de Bitcoin. Stacks es el caso donde sí existe un token nativo propio (STX) 
+        ya que tiene sus propios validadores por lo que necesita el token STX para pagarle a sus mineros y recompensar a los 
+        usuarios con BTC<br><br>
+        <a style="color: red; font-weight: 700;">¿Cómo funciona?</a> <br><br>
+        1. Utiliza un puente (llamado Powpeg) donde bloqueas BTC en la red principal para
+        recibir rBTC (un token pegado 1:1 con Bitcoin) en Rootstock. <br>
+        2. Su mayor ventaja es que es compatible con la EVM (Ethereum Virtual Machine). 
+        Esto significa que los desarrolladores pueden migrar aplicaciones de Ethereum 
+        (DeFi, préstamos, NFTs) a Bitcoin. <br>
+        3. Se asegura mediante Merged Mining (los mismos mineros de Bitcoin procesan los 
+        bloques de RSK al mismo tiempo). <br><br>
+        Caso de uso ideal: Aplicaciones DeFi (préstamos, intercambios descentralizados) 
+        usando Bitcoin respaldado 1:1 como colateral.
+      </p>
+    </section>
+
+    <section id="module2">
+      <h2>L2 de Ethereum</h2><br>
+      <p>
+        <a style="color: red; font-weight: 700; font-size: 20px;">- Arbitrum One</a>
+        <br><br>
+        Agrupa miles de transacciones fuera de la red principal de Ethereum y envía una sola prueba simplificada a Ethereum.  <br>
+        Utiliza un enfoque "optimista": asume que todas las transacciones son válidas a menos que alguien presente una prueba 
+        de fraude dentro de una ventana de tiempo (unos 7 días para retiros a Ethereum mainnet). <br><br>
+        Si buscas intercambios complejos, préstamos o trading con apalancamiento descentralizado, Arbitrum es una referencia principal.
+        <br><br>
+        <img src="galeria/arbitrum.jpg" alt="arbitrum.jpg" style="width: 35%;">
+        <br><br>
+        <a style="color: red; font-weight: 700; font-size: 20px;">- Base</a>
+        <br><br>
+        Base aprovecha la infraestructura de Optimism (OP Stack) para brindar transacciones ultra rápidas e integrarse de manera 
+        fluida con el ecosistema de Coinbase. <br><br>
+        Su facilidad de entrada desde la app de Coinbase y pasarelas de pago tradicionales hace que la experiencia de usuario 
+        sea muy parecida a usar una app de banco normal.
+        <br><br>
+        <a style="color: red; font-weight: 700; font-size: 20px;">- OP Mainnet (Optimism)</a>
+        <br><br>
+        Al igual que Arbitrum, utiliza Optimistic Rollups para procesar transacciones rápido y barato. Sin embargo, la gran 
+        visión de Optimism es la creación de la Superchain: un estándar de código abierto (llamado OP Stack) que permite a 
+        cualquiera lanzar su propia Layer 2 interoperable. <br><br>
+        Lo chevere de OP Stack es que su código se ha convertido en el estándar de la industria; de hecho, muchas otras L2 
+        (incluyendo Base) están construidas sobre la tecnología de Optimism.
+        <br><br>
+        <a style="color: red; font-weight: 700; font-size: 20px;">- Polygon (PoS / zkEVM)</a>
+        <br><br>
+        A diferencia de Arbitrum, OP Mainnet y Base (que son L2 puras que dependen directamente del consenso de Ethereum para 
+        su seguridad), Polygon PoS es una blockchain independiente que corre en paralelo a Ethereum. Tiene sus propios 
+        validadores que aseguran la red mediante un consenso Proof-of-Stake y se comunica con Ethereum mediante puentes (bridges).
+        <br><br>
+        <img src="galeria/polygon.jpg" alt="polygon.jpg" style="width: 40%;">
+        <br><br>
+        Se enfoca en pagos rápidos, juegos (Gaming Web3), marcas comerciales masivas (Starbucks, Nike, Reddit) e integración 
+        con plataformas tradicionales. <br>
+
+        <br><br>
+
+      </p>
+    </section>
+
+    <section id="module3">
+      <h2>¿Y las demás redes L1?</h2><br>
+      <p>
+        Filosóficamente Solana, BNB Chain, Tron, Avalanche, etc no necesitan una L2 pero han ido adaptando modelos similares.
+        <br><br>
+        - Solana: No tiene ya que la filosofía central de Solana es escalar todo en la L1. Sus creadores argumentan que 
+        fragmentar la liquidez en capas secundarias, como Ethereum, destruye la experiencia de usuario. Como su L1 ya procesa 
+        miles de transacciones por segundo con muy bajos costos, no ha sido necesario crear L2s tradicionales.
+        <br><br>
+        - BNB Chain: Sí tiene. Crearon opBNB, una L2 basada en el OP Stack (tecnología de Optimism). A pesar de que BNB 
+        Chain ya es bastante rápida y barata, lanzaron esta L2 para aplicaciones masivas como juegos web3 o SocialFi 
+        que requieren millones de microtransacciones diarias sin saturar la red principal. <br><br>
+        - Avalanche: Sí y no xd. Avalanche usa un modelo distinto llamado Subnets (Subredes). <br>
+        En lugar de hacer rollups tradicionales como Ethereum, Avalanche permite que cualquiera cree su propia blockchain 
+        secundaria e independiente (Subnet) conectada a la red principal. <br>
+      </p>
+    </section>
+
+    
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

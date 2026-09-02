@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Activate: Criptomonedas 3</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="../../../media/Logo_Windows.png">
+</head>
+<body>
+
+  <div class="mobile-toggle" aria-hidden="false">
+    <button id="hamburger" aria-controls="primary-sidebar" aria-expanded="false" aria-label="Toggle navigation">
+      ☰
+    </button>
+    <div style="margin-left:.6rem;font-weight:600">Infraestructura</div>
+  </div>
+
+  <!-- Left sidebar -->
+  <aside id="primary-sidebar" class="sidebar" aria-label="Primary navigation">
+    <div class="brand" role="img" aria-hidden="false">
+      <span class="logo" aria-hidden="true"><img src="../../../media/Logo_Windows.png" alt="Logo" style="width: 100%;"></span>
+      <span class="title">Infraestructura</span>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="../criptomonedas.html">Regresar</a></li>
+        <li><a href="criptomonedas2.html">2. Blockchain</a></li>
+        <li><a href="criptomonedas3.html" aria-current="page">3. Red P2P y Nodos</a></li>
+        <li><a href="criptomonedas4.html">4. Wallets</a></li>
+      </ul>
+    </nav>
+
+    <div style="margin-top:auto;padding:1rem;font-size:.85rem;color:rgba(255, 255, 255, 0.6)">
+      Kryptobyte - Activate
+    </div>
+  </aside>
+
+
+  <main class="main" id="content" tabindex="-1">
+    <h1>Red P2P y Nodos</h1>
+
+    <section id="module1">
+      <h2>Si no hay bancos... ¿quién guarda la blockchain?</h2><br>
+      <p>
+        La respuesta simple y directa es: <b>miles de computadoras en todo el mundo, llamadas nodos</b><br><br>
+        Como hemos visto, en un banco tradicional, hay un único servidor central que es 
+        controlado por el banco. En blockchain, en lugar de confiar en una sola empresa/banco, 
+        la red le entrega una copia exacta y completa de todo el historial de transacciones 
+        a cualquiera que quiera instalar el programa. <br><br><br>
+        <a style="color:red; font-size: 21px;">Okey pero.... Como funciona en la practica?</a>
+        Imagina que somos un grupo de 10 amigos que anotamos los gastos de un viaje a 
+        Machu Picchu. En lugar de que una sola persona guarde la libreta de gastos, los 10 tenemos
+        un copia idéntica de la misma libreta. <br><br>
+        1. Copia colectiva: Cada vez que alguien hace una transacción (por ejemplo, yo te mando 
+        0.1 Bitcoin), enviamos la informacion a los demas para que lo revisen. <br>
+        2. Validación: El retos de nuestros amigos revisan en su propia copia si yo 
+        realmente tengo esa cantidad de dinero. Si la mayoría está de acuerdo, la 
+        transacción se aprueba. <br>
+        3. Sincronización: Despues de  que la transacción se apruebe, todos lo anotamos en la
+        libreta. <br><br><br>
+        <a style="color:red; font-size: 21px;">¿Por qué nadie puede hacer trampa?</a><br><br>
+        Si alguien intenta alterar su copia local (la "libreta") para decir "ahora tengo 1,000 Bitcoins", 
+        las demás computadoras de la red comparan sus registros/libretas, detectan que esa copia no 
+        coincide con el resto y la rechazan automáticamente.
+        Para destruir o hackear una blockchain, tendrías que apagar o modificar 
+        más del 50% de las decenas de miles de computadoras conectadas simultáneamente 
+        alrededor del planeta, algo técnicamente casi imposible.
+      </p>
+    </section>
+
+    <section id="module2">
+      <h2>P2P y nodos</h2> <br>
+      <p>
+        P2P es la abreviación de <i>Peer-to-Peer</i> o <i>Red entre pares</i><br>
+        P2P significa que las personas o computadoras se comunican e intercambian cosas directamente 
+        entre ellas, sin necesidad de un intermediario (banco, gobierno, etc). <br><br>
+        <img src="galeria/p2p.png" alt="p2p.png" style="width: 30%;">
+        <br><br>
+
+        - El modelo tradicional (Cliente-Servidor): Imagina que quieres enviarle una foto a un amigo 
+        por WhatsApp. Tu foto primero sube a los servidores de la empresa (Meta) y luego ellos 
+        se la entregan a tu amigo. Hay un intermediario en el centro. <br><br>
+        - El modelo P2P (Persona a Persona): Imagina que estás al lado de tu amigo y le 
+        entregas una carta en la mano. Nadie más la toca, no pasa por un correo postal 
+        ni por un banco ni nada de eso. Es una conexión directa. <br><br>
+        En las criptomonedas, si le envías dinero a alguien, la transacción va 
+        directo de tu billetera a la de la otra persona a través de la red, sin que pase por
+        ningún banco al que pidas permiso o te cobre comisiones de intermediario. <br><br><br>
+        <a style="color:red; font-size: 21px; font-weight: 600;">¿Qué es un Nodo?</a><br><br>
+        Un nodo es simplemente cualquier computadora conectada a la red de la blockchain que 
+        tiene instalado el programa oficial para guardar la información y verificar que nadie 
+        haga trampa. <br>
+      </p>
+    </section>
+
+
+    
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

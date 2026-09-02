@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Activate: Criptomonedas 5</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="../../../media/Logo_Windows.png">
+</head>
+<body>
+
+  <div class="mobile-toggle" aria-hidden="false">
+    <button id="hamburger" aria-controls="primary-sidebar" aria-expanded="false" aria-label="Toggle navigation">
+      ☰
+    </button>
+    <div style="margin-left:.6rem;font-weight:600">Bitcoin</div>
+  </div>
+
+  <!-- Left sidebar -->
+  <aside id="primary-sidebar" class="sidebar" aria-label="Primary navigation">
+    <div class="brand" role="img" aria-hidden="false">
+      <span class="logo" aria-hidden="true"><img src="../../../media/Logo_Windows.png" alt="Logo" style="width: 100%;"></span>
+      <span class="title">Bitcoin</span>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="../criptomonedas.html">Regresar</a></li>
+        <li><a href="criptomonedas5.html" aria-current="page">5. Bitcoin y Transacciones</a></li>
+        <li><a href="criptomonedas6.html">6. Criptografía</a></li>
+        <li><a href="criptomonedas7.html">7. Minería</a></li>
+      </ul>
+    </nav>
+
+    <div style="margin-top:auto;padding:1rem;font-size:.85rem;color:rgba(255, 255, 255, 0.6)">
+      Kryptobyte - Activate
+    </div>
+  </aside>
+
+
+  <main class="main" id="content" tabindex="-1">
+    <h1>Bitcoin y transacciones</h1>
+
+    <section id="module1">
+      <h2>¿Qué es Bitcoin?</h2><br>
+      <p>
+        Bitcoin (con "B" mayúscula) es la primera red de blokchain, y bitcoin (con "b" 
+        minúscula, o BTC) es la moneda digital que se usa dentro de esa red. Es importante
+        comenzar con esto ya que muchos se confunden. <br><br>
+        Fue lanzada en el 2009 por una persona o grupo (no se sabe) bajo el nombre de
+        <i>Satoshi Nakamoto</i> y nació precisamente para resolver el problema del que hablabamos antes:
+         Permitir enviar dinero a cualquier parte del mundo sin depender de bancos, 
+         gobiernos ni empresas. <br><br>
+         La bitcoin es peer-to-peer y se guarda en nodos (miles de computadoras). Tú puedes ser
+         uno de esos nodos pero eso lo explicare dentro de poco. <br><br>
+        <a style="color: red; font-weight: 700;">Las 3 características fundamentales:</a>
+        <br><br>
+        1. Escazes: Los dólares, soles peruanos, euros, pesos, etc pueden ser impresos
+        por el banco central pero, en la bitcoin, solo existirán 21 millones de bitcoins 
+        en toda la historia. Esta regla está escrita en su código fuente y nadie la 
+        puede cambiar (ni siquiera los creadores). <br><br>
+        2. Es divisible: Una sola btc vale miles de dólares pero no necesitas mucho dinero
+        ya que puedes comprar desde $1 dolar que serían, tal vez, un 0.000001BTC. <br><br>
+        3. Inmutable y transparente: Todas las transacciones son públicas (cualquiera las puede 
+        ver) y quedan registradas para siempre en su red de blockchain. Una vez que una 
+        transacción entra a la red, nadie la puede borrar, alterar ni revertir.
+        <br><br>        
+      </p>
+      <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+        <img src="galeria/btc.png" alt="btc.png" style="width: 50%;">
+      </div>
+    </section>
+
+    <section id="module2">
+      <h2>El modelo UTXO (Inputs y Outputs)</h2>
+      <p>
+        Imagina que vas a una tienda a comprar un café que cuesta $3 dólares y en tu 
+        billetera física solo tienes un billete de $10 dólares: <br>
+        1. No puedes romper el billete de $10 por la mitad <br>
+        2. Le entregas el billete completo de $10 al cajero (Input o Entrada) <br>
+        3. El cajero se cobra los $3 del café y te devuelve $7 dólares de cambio (Output o Salida) <br>
+        <br>
+        Ahora en tu billetera física ya no tienes el billete de $10, sino un nuevo billete de $7 que
+        queda disponible para tu próxima compra. Eso es exactamente el modelo UTXO. 
+        <br><br><br>
+        <a style="color: red; font-weight: 700;">¿Cómo funciona en Bitcoin con Inputs y Outputs?</a>
+        <br><br>
+        Cuando abres tu billetera y ves que tienes 0.5 BTC, tu billetera en realidad está sumando varios 
+        fragmentos (UTXOs) que recibiste en el pasado (por ejemplo, uno de 0.2 BTC, otro de 
+        0.2 BTC y uno de 0.1 BTC) <br>
+      </p>
+    </section>
+
+    <section id="module3">
+      <h2>Direcciones, transacciones y la Mempool</h2><br>
+      <p>
+        <a style="color: red; font-weight: 700; font-size: 20px;">1. Las direcciones</a>
+        <br><br>
+        Una dirección es equivalente a tu número de cuenta bancaria pero en formato Criptografía
+        Es la cadena de letras y números que compartes públicamente para que alguien te envíe fondos
+        <br>
+        Una dirección luce algo así: <a style="color: darkblue">1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa</a>
+
+        <br><br><br>
+
+        <a style="color: red; font-weight: 700; font-size: 20px;">2. Las transacciones</a>
+        <br><br>
+        Una transacción es simplemente un mensaje firmado digitalmente que dice: "Autorizo 
+        transferir este saldo (UTXO) de mi dirección a esta otra dirección". <br><br>
+        Cada transacción contiene 3 cosas esenciales: <br><br>
+        1. Inputs (origen): ¿De qué dirección proviene el dinero? <br>
+        2. Outputs (destino): ¿A qué dirección va el dinero? <br>
+        3. La Firma Digital: La prueba matemática generada por tu clave 
+        privada que demuestra que tú eres el dueño legal de esos fondos <br>
+        <br><br><br>
+        <a style="color: red; font-weight: 700; font-size: 20px;">3. Memory Pool o Sala de Espera</a>
+        <br><br>
+        Cuando le das al botón de "Enviar dinero" en tu wallet, la transacción no entra 
+        inmediatamente a la blockchain. Primero debe pasar por la mempool que es como una 
+        sala de espera temporal donde residen todas las transacciones válidas que han 
+        sido enviadas a la red pero que aún no han sido incluidas en un bloque por un minero. <br>
+        <br>
+        En el siguiente módulo hablaremos de minería.
+      </p>
+    </section>
+
+    <section id="module3">
+      <h2>Fees (comisiones de red)</h2>
+      <p>
+        Entender cómo se calculan las comisiones de red o network fees es uno de los 
+        mayores "ajás" del mundo cripto, porque no funcionan para nada como un banco.
+        <br><br>
+        <a style="color: red; font-weight: 700; font-size: 20px;">Pagas por tamaño (bytes), NO por monto (dinero)</a>
+        <br><br>
+        En un banco tradicional o en una tarjeta de crédito, te cobran un porcentaje: 
+        Enviar $100 cuesta poco y enviar $1,000,000 cuesta mucho más. <br>
+        En Bitcoin: <br>
+        - Enviar $10,000,000 de dólares puede costarte $0.30 USD de comisión <br>
+        - Enviar $5 dólares puede costarte $0.30 USD de comisión.
+        <br><br>
+        ¿Por qué? Porque a los mineros no les importa cuánto dinero mueves; a 
+        ellos les importa cuánto espacio ocupa tu transacción dentro del bloque
+        <br><br>
+        Casi todas las billeteras modernas calculan la comisión recomendada automáticamente 
+        según el estado de la Mempool en ese instante. Sin embargo, la mayoría te permite 
+        elegir entre "Lenta/Barata", "Media" o "Rápida" para ajustar el costo según la 
+        urgencia que tengas. Si quieres que un minero trabaje en tu transacción, entonces
+        tendras que pagar porque la comisión será más alta
+      </p>
+    </section>
+
+    
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
