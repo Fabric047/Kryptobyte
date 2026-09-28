@@ -1,37 +1,33 @@
-body{
+/* --- CONFIGURACIÓN GENERAL --- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     padding: 10px;
-    margin:10px;
+    margin: 10px;
     background-color: #CEE1F2;
     height: 100vh;
 }
 
-#about-me p{
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
-}
-#about-me p a{
-    color: darkblue;
-    font-weight: 700;
-}
-
-/* STYLES OF THE NAV */
-nav{
+/* --- ESTILOS DE LA NAVEGACIÓN (NAV) --- */
+nav {
     display: flex;
     position: relative;
     background: blue;
     padding-top: 0px;
-    margin:0px;
+    margin: 0px;
     flex-wrap: wrap;
     box-shadow: 0 0 25px rgb(0, 0, 0);
     justify-content: space-between;
     align-items: center;
 }
-.brand a img{
+.brand a img {
     margin: 10px;
     width: 55px;
     height: 55px;
 }
-ul{
+ul {
     margin: auto;
     width: auto;
     font-family: Arial, Helvetica, sans-serif;
@@ -40,7 +36,7 @@ ul{
     flex-direction: column;
     text-align: center;
 }
-ul li a{
+ul li a {
     background-color: blue;
     color: white;
     font-weight: 600;
@@ -50,12 +46,15 @@ ul li a{
     padding: 10px 15px;
     display: block;
 }
-ul li a:hover{
+ul li a:hover {
     border-radius: 7px;
     background-color: transparent;
     color: rgb(202, 199, 199);
     box-shadow: 0 0 10px #00aeff;
-}ul > li{float: left;}
+}
+ul > li {
+    float: left;
+}
 .menu-icon {
     display: block;
     cursor: pointer;
@@ -70,12 +69,11 @@ ul li a:hover{
         display: flex;
         flex-direction: row;
     }
-    .menu-icon {display: none}
+    .menu-icon {display: none;}
 }
-/*  */
 
-/* MAIN */
-main{
+/* --- MAIN Y ESTILOS GENERALES DE SECCIONES --- */
+main {
     padding: 60px 0;
     display: flex;
     justify-content: center;
@@ -84,11 +82,136 @@ main{
     gap: 130px;
 }
 
+main section {
+    /* Estilos de estructura */
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    border-left: 6px solid transparent;
+    max-width: 700px;
+    width: 100%;
+    box-sizing: border-box;
+
+    /* Efectos Smooth (Animaciones) */
+    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.6s ease;
+    opacity: 0; /* Oculto por defecto para la animación de entrada */
+    transform: translateY(30px); /* Ligeramente desplazado hacia abajo */
+}
+
+/* Efecto al pasar el cursor (hover) por cualquier sección */
+main section:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Clase que añadirá JavaScript para que las secciones aparezcan suavemente */
+main section.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Colores laterales de tus módulos (pasados del HTML al CSS) */
+section[data-module="1"] { border-left-color: #2ECC71; }
+section[data-module="2"] { border-left-color: #F1C40F; }
+section[data-module="3"] { border-left-color: #E67E22; }
+section[data-module="4"] { border-left-color: red; }
+section[data-module="5"] { border-left-color: #000000; }
 
 
-/* TEXT OF KRIPTOBYTE */
-.textoAnimado{
-    font-size: 3rem;
+/* --- DISEÑO ESTILO DISCORD PARA LA SECCIÓN #ABOUT-ME --- */
+#about-me.profile-card {
+    padding: 0 !important; /* Quitamos el padding para que el banner toque los bordes */
+    overflow: hidden; 
+    background: linear-gradient(135deg, #ffffff 0%, #f4f7f9 100%);
+    border-left: none; /* Quitamos el borde lateral para que se vea como tarjeta completa */
+}
+
+.profile-banner img {
+    width: 100%;
+    height: 180px; /* Altura del banner[cite: 5] */
+    object-fit: cover; 
+    display: block;
+    border-bottom: 3px solid #2ECC71;
+}
+
+.profile-content {
+    padding: 20px 30px 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -80px; /* Sube el contenido para superponer el avatar al banner */
+}
+
+/* Avatar Dinámico que cambiará entre tus 3 imágenes */
+.avatar-dinamico {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #ffffff; 
+    box-shadow: 0 0 25px rgba(46, 204, 113, 0.6);
+    background-color: #000;
+    z-index: 2; 
+    margin-bottom: 20px;
+}
+
+.avatar-dinamico .pose {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0; 
+    animation: cambiarAvatar 12s infinite; 
+}
+
+/* Retrasos para el cruce de imágenes de tus avatares[cite: 6, 7, 8] */
+.avatar-dinamico .pose1 { animation-delay: 0s; }
+.avatar-dinamico .pose2 { animation-delay: 4s; }
+.avatar-dinamico .pose3 { animation-delay: 8s; }
+
+/* Animación para que las imágenes se desvanezcan suavemente una a otra */
+@keyframes cambiarAvatar {
+    0%, 25% { opacity: 1; }  
+    33%, 92% { opacity: 0; } 
+    100% { opacity: 1; }     
+}
+
+/* Textos del perfil dentro de #about-me */
+.profile-content .about-text {
+    text-align: center;
+    max-width: 600px;
+}
+
+.about-text h2 {
+    color: blue;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#about-me p {
+    font-size: 18px; 
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    color: #444;
+    margin: 0;
+}
+
+#about-me p a {
+    color: darkblue;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+/* --- TEXTO ANIMADO DE KRIPTOBYTE --- */
+.textoAnimado {
+    font-size: 2rem;
     color: blue;
     white-space: nowrap;
     overflow: hidden;
@@ -96,14 +219,16 @@ main{
     animation: typing 3s steps(14) infinite, blink-caret 1.5s step-end infinite;
     animation-delay: 1s;
 }
-@keyframes typing{
-    from{width: 0;}
-    to{width: 108%;}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 108%; }
 }
-@keyframes blink-caret{
-    00%{border-color: black;}
-    25%{border-color:  white;}
-    50%{border-color: black;}
-    75%{border-color:  white;}
-    100%{border-color: black;}
+
+@keyframes blink-caret {
+    0%   { border-color: black; }
+    25%  { border-color: white; }
+    50%  { border-color: black; }
+    75%  { border-color: white; }
+    100% { border-color: black; }
 }
