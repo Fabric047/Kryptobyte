@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="media/Fabric0474.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="google-site-verification" content="QP0ZJwLH2EqoDGWHuFbVCyBxkLe1o0uk1otL38ErZf8" />
+    <title>Fabric047 (Fabricio Alexander Paredes Caballero)</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#080C14',
+                            surface: '#0E1626',
+                            card: 'rgba(15, 23, 42, 0.75)',
+                            neonGreen: '#00FF66',
+                            emeraldAccent: '#10B981',
+                            cyberBlue: '#38BDF8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+                    },
+                    boxShadow: {
+                        'glow-emerald': '0 0 25px -5px rgba(16, 185, 129, 0.35)',
+                        'glow-cyan': '0 0 25px -5px rgba(56, 189, 248, 0.35)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style data-purpose="custom-animations">
+        @keyframes pulseGlow {
+
+            0%,
+            100% {
+                opacity: 0.45;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.85;
+                transform: scale(1.05);
+            }
+        }
+
+        .cyber-glow {
+            animation: pulseGlow 4s ease-in-out infinite;
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+    </style>
+    <style data-purpose="base-mobile-overrides">
+        /* iOS smooth scrolling and safe area padding optimization */
+        body {
+            -webkit-font-smoothing: antialiased;
+            -webkit-tap-highlight-color: transparent;
+            padding-top: env(safe-area-inset-top);
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-[#070B12] text-slate-100 min-h-screen flex justify-center selection:bg-emerald-500/30 selection:text-emerald-300">
+
+    <main
+        class="w-full max-w-[430px] min-h-screen bg-[#090D17] border-x border-slate-800/60 flex flex-col relative overflow-hidden pb-12 shadow-2xl">
+        <!-- Ambient background neon orbs -->
+        <div aria-hidden="true"
+            class="absolute -top-20 -left-20 w-64 h-64 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none cyber-glow">
+        </div>
+        <div aria-hidden="true"
+            class="absolute top-80 -right-24 w-72 h-72 bg-sky-500/15 rounded-full blur-3xl pointer-events-none cyber-glow">
+        </div>
+        <div aria-hidden="true"
+            class="absolute bottom-40 -left-20 w-60 h-60 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none">
+        </div>
+
+
+        <header
+            class="sticky top-0 z-30 w-full px-5 py-3.5 glass-effect bg-[#090D17]/80 border-b border-slate-800/70 flex items-center justify-between">
+            <a class="flex items-center gap-2 group focus:outline-none focus:ring-1 focus:ring-emerald-400 rounded-md py-0.5 px-1.5 -ml-1.5 transition-colors"
+                href="https://krypto-byte.com" rel="noopener noreferrer" target="_blank">
+                <span
+                    class="w-2 h-2 rounded-sm bg-emerald-400 rotate-45 group-hover:scale-125 transition-transform shadow-[0_0_8px_#00FF66]"></span>
+                <span
+                    class="font-mono text-xs tracking-wider uppercase font-semibold text-slate-300 group-hover:text-emerald-400 transition-colors">KRIPTOBYTE</span>
+            </a>
+            <!-- Quick status indicator -->
+            <div
+                class="inline-flex items-center gap-1.5 bg-emerald-500/10 border border-emerald-500/25 px-2.5 py-1 rounded-full">
+                <span class="relative flex h-2 w-2">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span class="font-mono text-[11px] font-medium text-emerald-400 tracking-tight">Active Node</span>
+            </div>
+        </header>
+
+        <section class="relative pt-6 pb-2 px-5 flex flex-col items-center text-center" data-purpose="hero-profile">
+            <!-- Hacker Cyber Avatar with illuminated ring -->
+            <div class="relative mb-4 group cursor-pointer">
+                <!-- Glow outline ring -->
+                <div
+                    class="absolute -inset-1 bg-gradient-to-tr from-emerald-500 via-sky-400 to-emerald-300 rounded-full blur-sm opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+                </div>
+                <!-- Avatar Graphic (Cyber Hoodie with Controller/Laptop) -->
+                <div
+                    class="relative w-28 h-28 rounded-full overflow-hidden border-2 border-emerald-400/90 bg-[#0B1321] flex items-center justify-center shadow-glow-emerald">
+                    <svg class="w-full h-full object-cover" fill="none" viewbox="0 0 200 200"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect fill="#0A111F" height="200" width="200"></rect>
+                        <!-- Background grid lines -->
+                        <path d="M0 40H200M0 80H200M0 120H200M0 160H200M40 0V200M80 0V200M120 0V200M160 0V200"
+                            stroke="#162740" stroke-dasharray="3 3" stroke-width="0.8"></path>
+                        <!-- Hoodie body -->
+                        <path d="M40 200C40 152 65 140 100 140C135 140 160 152 160 200H40Z" fill="#0E2319"
+                            stroke="#10B981" stroke-width="2.5"></path>
+                        <!-- Hoodie inner fold -->
+                        <path d="M72 145L100 178L128 145" stroke="#00FF66" stroke-linecap="round" stroke-width="2.5">
+                        </path>
+                        <!-- Hood head shape -->
+                        <path d="M60 125C52 75 68 38 100 38C132 38 148 75 140 125C130 142 70 142 60 125Z" fill="#091811"
+                            stroke="#10B981" stroke-width="2.5"></path>
+                        <!-- Shadow inside hood -->
+                        <path d="M68 118C64 80 75 52 100 52C125 52 136 80 132 118C124 130 76 130 68 118Z"
+                            fill="#04080D"></path>
+                        <!-- Glowing Eyes (Cyber Visor / Hacker glow) -->
+                        <polygon fill="#00FF66" points="80,94 94,94 88,99"></polygon>
+                        <polygon fill="#00FF66" points="120,94 106,94 112,99"></polygon>
+                        <circle cx="87" cy="96" fill="#00FF66" filter="drop-shadow(0 0 4px #00FF66)" r="3.5"></circle>
+                        <circle cx="113" cy="96" fill="#00FF66" filter="drop-shadow(0 0 4px #00FF66)" r="3.5"></circle>
+                        <!-- Gamepad / Terminal controller in hands -->
+                        <path
+                            d="M75 168C72 158 84 154 100 154C116 154 128 158 125 168C122 178 114 182 108 175L100 169L92 175C86 182 78 178 75 168Z"
+                            fill="#0B261D" stroke="#00FF66" stroke-width="2"></path>
+                        <!-- Mini buttons & D-pad on controller -->
+                        <circle cx="86" cy="165" fill="#38BDF8" r="2.2"></circle>
+                        <circle cx="114" cy="163" fill="#10B981" r="1.8"></circle>
+                        <circle cx="118" cy="167" fill="#00FF66" r="1.8"></circle>
+                    </svg>
+                </div>
+
+                <div
+                    class="absolute bottom-1 right-1 w-7 h-7 rounded-full bg-[#080E1A] border-2 border-emerald-400 flex items-center justify-center text-emerald-400 shadow-md">
+                    <svg class="w-3.5 h-3.5" fill="currentColor" viewbox="0 0 20 20">
+                        <path clip-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+            </div>
+            <!-- Identity & Titles -->
+            <h1 class="text-2xl font-bold tracking-tight text-white flex items-center gap-1.5">
+                Fabricio Paredes Caballero
+            </h1>
+            <!-- Username Pill -->
+            <div
+                class="mt-1.5 inline-flex items-center gap-1.5 text-xs font-mono font-semibold px-3 py-1 rounded-full bg-slate-800/70 border border-slate-700/60 text-sky-400">
+                <span class="text-emerald-400">@</span>Fabric047
+            </div>
+            <p class="mt-2 text-xs uppercase tracking-wider font-semibold text-slate-400">
+                Estudiante de Ingeniería de Ciberseguridad
+            </p>
+            <!-- Availability status badge -->
+            <div
+                class="mt-3 inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-medium bg-emerald-950/40 border border-emerald-500/30 text-emerald-300">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Fabric047@kali:~$ echo "Hello, world!"
+            </div>
+            <!-- Skill / Focus Pills -->
+            <div class="mt-4 flex flex-wrap justify-center gap-1.5 max-w-[340px]" data-purpose="skill-tags">
+                <span
+                    class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-[#111A2E] border border-slate-700/70 text-slate-300">🛡️
+                    Ciberseguridad</span>
+                <span
+                    class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-[#111A2E] border border-slate-700/70 text-slate-300">📈
+                    Fintech &amp; Finanzas</span>
+                <span
+                    class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-[#111A2E] border border-slate-700/70 text-slate-300">⛓️
+                    Cripto &amp; Blockchain</span>
+                <span
+                    class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-[#111A2E] border border-slate-700/70 text-slate-300">🐧
+                    Linux (Kali / Fedora)</span>
+            </div>
+        </section>
+        <!-- END: HeroProfileSection -->
+        <div class="px-5 space-y-4 mt-2">
+            <!-- BEGIN: AboutCard -->
+            <!-- 'Sobre Mí' section with terminal aesthetics and exact reference copy -->
+            <section
+                class="glass-effect bg-[#0E1726]/85 border border-emerald-500/25 rounded-2xl p-4 relative overflow-hidden shadow-lg"
+                data-purpose="about-me">
+                <!-- Top decorative tab bar in mini terminal style -->
+                <div class="flex items-center justify-between border-b border-slate-800 pb-2.5 mb-3">
+                    <div class="flex items-center gap-1.5">
+                        <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80 inline-block"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block"></span>
+                        <span class="ml-2 font-mono text-[11px] text-slate-400">profile.sh</span>
+                    </div>
+                    <span
+                        class="text-[10px] font-mono text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/40">SecOps
+                        v2.4</span>
+                </div>
+                <h2 class="text-base font-bold text-white mb-2 flex items-center gap-2">
+                    <span class="w-1.5 h-4 bg-emerald-400 rounded-full"></span>
+                    Sobre Mí
+                </h2>
+                <!-- Exact statement text requested from reference photo -->
+                <p class="text-[13px] leading-relaxed text-slate-300">
+                    ¡Hola! 👋 Soy <strong class="text-white font-semibold">Fabricio Paredes Caballero</strong>, mi
+                    username es <strong class="text-emerald-400 font-mono">Fabric047</strong>, soy estudiante de
+                    Ingeniería de Ciberseguridad. Me gusta la intersección entre la tecnología y las finanzas por lo que
+                    me gusta investigar sobre nuevas tecnologías y curiosear con todo ello.
+                </p>
+                <!-- Mini terminal prompt highlight -->
+                <div
+                    class="mt-3 pt-2.5 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                    <span class="text-emerald-400/90 flex items-center gap-1">
+                        <span class="text-sky-400">fabric047@kali</span>:~$ info --status
+                    </span>
+                    <span class="text-slate-400 font-medium text-[10px]">$</span>
+                </div>
+            </section>
+            <!-- END: AboutCard -->
+            <!-- BEGIN: SocialLinksSection -->
+            <!-- Interactive Link Cards matching reference profiles -->
+            <section class="space-y-2.5" data-purpose="links-directory">
+                <div class="flex items-center justify-between px-1">
+                    <h2
+                        class="text-xs font-mono uppercase tracking-wider text-slate-400 font-bold flex items-center gap-2">
+                        <svg class="w-3.5 h-3.5 text-sky-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                            <path
+                                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                        Links
+                    </h2>
+                    <span class="text-[11px] font-mono text-slate-400">4 enlaces</span>
+                </div>
+                <!-- KRIPTOBYTE Web / Project Card (From image browser tab) -->
+                <a class="group flex items-center justify-between p-3.5 rounded-xl bg-gradient-to-r from-[#0d221c] to-[#0E1726] border border-emerald-500/40 hover:border-emerald-400 active:scale-[0.98] transition-all duration-200"
+                    href="https://krypto-byte.com" rel="noopener noreferrer" target="_blank">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-400">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                <path
+                                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div
+                                class="text-sm font-semibold text-white group-hover:text-emerald-300 transition-colors flex items-center gap-1.5">
+                                KRIPTOBYTE
+                                <span
+                                    class="text-[10px] font-mono px-1.5 py-0.2 rounded bg-emerald-900/60 text-emerald-300 border border-emerald-600/40 font-semibold">Web</span>
+                            </div>
+                            <p class="text-xs text-slate-400 font-mono">krypto-byte.com</p>
+                        </div>
+                    </div>
+                    <svg class="w-4 h-4 text-emerald-400 group-hover:translate-x-0.5 transition-all" fill="none"
+                        stroke="currentColor" viewbox="0 0 24 24">
+                        <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                </a>
+                <!-- LinkedIn Profile Card -->
+                <a class="group flex items-center justify-between p-3.5 rounded-xl bg-[#0F1728] border border-slate-800 hover:border-sky-500/50 active:scale-[0.98] transition-all duration-200"
+                    href="www.linkedin.com/in/fabricioalexanderpc/" rel="noopener noreferrer" target="_blank">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-[#004182]/20 border border-sky-500/30 flex items-center justify-center text-sky-400 group-hover:bg-[#004182]/40 transition-colors">
+                            <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div
+                                class="text-sm font-semibold text-white group-hover:text-sky-300 transition-colors flex items-center gap-1.5">
+                                LinkedIn
+                                <span
+                                    class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-sky-950/50 text-sky-300 border border-sky-800/40">Networking</span>
+                            </div>
+                            <p class="text-xs text-slate-400 font-mono">Fabricio PC</p>
+                        </div>
+                    </div>
+                    <svg class="w-4 h-4 text-slate-500 group-hover:text-sky-400 group-hover:translate-x-0.5 transition-all"
+                        fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                </a>
+                <!-- GitHub Profile Card -->
+                <a class="group flex items-center justify-between p-3.5 rounded-xl bg-[#0F1728] border border-slate-800 hover:border-slate-600 active:scale-[0.98] transition-all duration-200"
+                    href="https://github.com/Fabric047" rel="noopener noreferrer" target="_blank">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-[#182338] border border-slate-700/60 flex items-center justify-center text-white group-hover:text-emerald-400 transition-colors">
+                            <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                                <path clip-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div
+                                class="text-sm font-semibold text-white group-hover:text-emerald-400 transition-colors flex items-center gap-1.5">
+                                GitHub
+                                <span
+                                    class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-800 text-slate-300">Code
+                                    &amp; Repos</span>
+                            </div>
+                            <p class="text-xs text-slate-400 font-mono">Fabric047</p>
+                        </div>
+                    </div>
+                    <svg class="w-4 h-4 text-slate-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 transition-all"
+                        fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                </a>
+                <!-- Medium Articles Card -->
+                <a class="group flex items-center justify-between p-3.5 rounded-xl bg-[#0F1728] border border-slate-800 hover:border-slate-600 active:scale-[0.98] transition-all duration-200"
+                    href="https://medium.com/@Fabric047" rel="noopener noreferrer" target="_blank">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-[#182338] border border-slate-700/60 flex items-center justify-center text-slate-200 group-hover:text-emerald-400 transition-colors">
+                            <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                                <path
+                                    d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75 0-3.17.53-5.75 1.19-5.75.66 0 1.19 2.58 1.19 5.75z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div
+                                class="text-sm font-semibold text-white group-hover:text-emerald-400 transition-colors flex items-center gap-1.5">
+                                Medium
+                                <span
+                                    class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-800 text-slate-300">Blog
+                                    / Papers</span>
+                            </div>
+                            <p class="text-xs text-slate-400 font-mono">Fabric047</p>
+                        </div>
+                    </div>
+                    <svg class="w-4 h-4 text-slate-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 transition-all"
+                        fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                </a>
+                <!-- Reddit Card -->
+                <a class="group flex items-center justify-between p-3.5 rounded-xl bg-[#0F1728] border border-slate-800 hover:border-slate-600 active:scale-[0.98] transition-all duration-200" href="https://reddit.com/user/Fabric047" rel="noopener noreferrer" target="_blank">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-[#182338] border border-slate-700/60 flex items-center justify-center text-amber-400 group-hover:text-amber-300 transition-colors">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                            <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.702zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="text-sm font-semibold text-white group-hover:text-amber-400 transition-colors flex items-center gap-1.5">
+                                Reddit
+                                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-800 text-slate-300">Comunidad</span>
+                            </div>
+                            <p class="text-xs text-slate-400 font-mono">u/Fabric047</p>
+                        </div>
+                    </div>
+                    <svg class="w-4 h-4 text-slate-500 group-hover:text-amber-400 group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                </a>
+            </section>
+            <!-- END: SocialLinksSection -->
+            <!-- BEGIN: FocusAreasGrid -->
+            <!-- Highlights in Cybersecurity and Financial Technology -->
+            <section class="pt-2" data-purpose="focus-areas">
+                <h2
+                    class="text-xs font-mono uppercase tracking-wider text-slate-400 font-bold mb-2.5 px-1 flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                    Áreas de Interés &amp; Laboratorio
+                </h2>
+                <div class="grid grid-cols-2 gap-2.5">
+                    <!-- Card 1 -->
+                    <div class="bg-[#0E1626]/70 border border-slate-800/80 rounded-xl p-3">
+                        <div class="text-emerald-400 mb-1.5">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                <path
+                                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xs font-semibold text-white">Análisis de Vulnerabilidades</h3>
+                        <p class="text-[11px] text-slate-400 mt-0.5">Auditoría ética y mitigación de amenazas.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-[#0E1626]/70 border border-slate-800/80 rounded-xl p-3">
+                        <div class="text-sky-400 mb-1.5">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xs font-semibold text-white">Tecnología Financiera</h3>
+                        <p class="text-[11px] text-slate-400 mt-0.5">Modelos fintech, Web3 y seguridad de datos.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-[#0E1626]/70 border border-slate-800/80 rounded-xl p-3">
+                        <div class="text-amber-400 mb-1.5">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                <path
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xs font-semibold text-white">Writeups</h3>
+                        <p class="text-[11px] text-slate-400 mt-0.5">Publicaciones sobre nuevas tecnologías.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="bg-[#0E1626]/70 border border-slate-800/80 rounded-xl p-3">
+                        <div class="text-emerald-400 mb-1.5">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                <path
+                                    d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xs font-semibold text-white">Linux environment</h3>
+                        <p class="text-[11px] text-slate-400 mt-0.5">Entornos Kali, fedora, hardening y redes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                class="mt-4 p-4 rounded-xl bg-gradient-to-b from-[#101b2d] to-[#0a101b] border border-slate-800 flex items-center justify-between">
+
+                <!-- BEGIN: TerminalFooter -->
+                <footer class="mt-8 pt-4 px-5 border-t border-slate-800/70 text-center" data-purpose="site-footer">
+                    <div class="font-mono text-[11px] text-slate-400 space-y-1">
+                        <p class="text-emerald-400/90 font-medium">fabric047@kali:~$ echo "Hello, World!" | nc -lvp 8080</p>
+                        <p class="text-slate-400 text-[10px] pt-1">
+                            Fabricio Paredes Caballero • @Fabric047
+                        </p>
+                    </div>
+                </footer>
+    </main>
+</body>
+
+</html>
