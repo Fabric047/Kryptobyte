@@ -207,6 +207,96 @@ section[data-module="5"] { border-left-color: #000000; }
     font-weight: 700;
     text-decoration: none;
 }
+/* --- LINKS SOCIALES (ABOUT-ME) --- */
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.social-links .social-link:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 6px); /* mitad del ancho menos medio gap */
+}
+
+@media (max-width: 500px) {
+    .social-links .social-link:last-child:nth-child(odd) {
+        width: 85%; /* en celular una sola columna, ancho completo */
+    }
+}
+.social-link {
+    --brand: #2ECC71;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: #fff;
+    border: 1px solid #e3e8ee;
+    border-left: 4px solid var(--brand);
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease,
+                background-color 0.25s ease, color 0.25s ease;
+}
+
+.social-link i {
+    font-size: 22px;
+    width: 26px;
+    text-align: center;
+    color: var(--brand);
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.social-label {
+    font-size: 14px;
+    color: #777;
+    transition: color 0.25s ease;
+}
+
+.social-name {
+    margin-left: auto;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+    transform: translateY(-3px);
+    background: var(--brand);
+    color: #fff;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    outline: none;
+}
+
+.social-link:hover i,
+.social-link:focus-visible i {
+    color: #fff;
+    transform: scale(1.15) rotate(-6deg);
+}
+
+.social-link:hover .social-label,
+.social-link:focus-visible .social-label {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Colores de cada marca */
+.social-link.github   { --brand: #24292e; }
+.social-link.linkedin { --brand: #0A66C2; }
+.social-link.medium   { --brand: #12100E; }
+.social-link.youtube  { --brand: #FF0000; }
+.social-link.reddit   { --brand: #FF4500; }
+
+/* Celulares: una sola columna */
+@media (max-width: 500px) {
+    .social-links {
+        grid-template-columns: 1fr;
+    }
+}
 
 
 /* --- TEXTO ANIMADO DE KRIPTOBYTE --- */
