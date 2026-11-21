@@ -207,6 +207,7 @@ section[data-module="5"] { border-left-color: #000000; }
     font-weight: 700;
     text-decoration: none;
 }
+
 /* --- LINKS SOCIALES (ABOUT-ME) --- */
 .social-links {
     display: grid;
@@ -218,16 +219,17 @@ section[data-module="5"] { border-left-color: #000000; }
 .social-links .social-link:last-child:nth-child(odd) {
     grid-column: 1 / -1;
     justify-self: center;
-    width: calc(50% - 6px); /* mitad del ancho menos medio gap */
+    width: calc(50% - 6px);
 }
 
-@media (max-width: 500px) {
-    .social-links .social-link:last-child:nth-child(odd) {
-        width: 85%; /* en celular una sola columna, ancho completo */
-    }
-}
 .social-link {
-    --brand: #2ECC71;
+    --brand: #2ECC71;                 /* color sólido: borde e ícono */
+    --brand-bg: linear-gradient(135deg, var(--brand),
+                color-mix(in srgb, var(--brand) 65%, #000)); /* fondo al hover */
+
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -240,8 +242,18 @@ section[data-module="5"] { border-left-color: #000000; }
     color: #333;
     text-align: left;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.25s ease, box-shadow 0.25s ease,
-                background-color 0.25s ease, color 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+}
+
+/* Capa de color que aparece suavemente al hacer hover (funciona con degradados) */
+.social-link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--brand-bg);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    z-index: -1;
 }
 
 .social-link i {
@@ -250,12 +262,6 @@ section[data-module="5"] { border-left-color: #000000; }
     text-align: center;
     color: var(--brand);
     transition: color 0.25s ease, transform 0.25s ease;
-}
-
-.social-label {
-    font-size: 14px;
-    color: #777;
-    transition: color 0.25s ease;
 }
 
 .social-name {
@@ -267,10 +273,13 @@ section[data-module="5"] { border-left-color: #000000; }
 .social-link:hover,
 .social-link:focus-visible {
     transform: translateY(-3px);
-    background: var(--brand);
     color: #fff;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
-    outline: none;
+    box-shadow: 0 8px 18px color-mix(in srgb, var(--brand) 45%, transparent);
+}
+
+.social-link:hover::before,
+.social-link:focus-visible::before {
+    opacity: 1;
 }
 
 .social-link:hover i,
@@ -279,25 +288,44 @@ section[data-module="5"] { border-left-color: #000000; }
     transform: scale(1.15) rotate(-6deg);
 }
 
-.social-link:hover .social-label,
-.social-link:focus-visible .social-label {
-    color: rgba(255, 255, 255, 0.85);
+.social-link:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 3px;
+}
+
+.social-link:active {
+    transform: translateY(-1px) scale(0.98);
 }
 
 /* Colores de cada marca */
-.social-link.github   { --brand: #24292e; }
-.social-link.linkedin { --brand: #0A66C2; }
-.social-link.medium   { --brand: #12100E; }
-.social-link.youtube  { --brand: #FF0000; }
-.social-link.reddit   { --brand: #FF4500; }
+.social-link.github    { --brand: #24292e; }
+.social-link.linkedin  { --brand: #0A66C2; }
+.social-link.medium    { --brand: #12100E; }
+.social-link.youtube   { --brand: #FF0000; }
+.social-link.reddit    { --brand: #FF4500; }
+.social-link.x         { --brand: #0b0b0b; }
+.social-link.instagram {
+    --brand: #E4405F;
+    --brand-bg: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+}
 
 /* Celulares: una sola columna */
 @media (max-width: 500px) {
     .social-links {
         grid-template-columns: 1fr;
     }
+    .social-links .social-link:last-child:nth-child(odd) {
+        width: 100%;
+    }
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .social-link,
+    .social-link i,
+    .social-link::before {
+        transition: none;
+    }
+}
 
 /* --- TEXTO ANIMADO DE KRIPTOBYTE --- */
 .textoAnimado {
